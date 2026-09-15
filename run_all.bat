@@ -38,6 +38,15 @@ if errorlevel 1 (
     goto :finish
 )
 
+git add -A >> "%LOGFILE%" 2>&1
+git commit -m "Automated update %date% %time%" >> "%LOGFILE%" 2>&1
+git push origin main >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    echo [WARN] git push failed - site not published this run >> "%LOGFILE%"
+) else (
+    echo [INFO] published to GitHub Pages >> "%LOGFILE%"
+)
+
 echo ==== %date% %time% : run_all.bat completed successfully ==== >> "%LOGFILE%"
 
 :finish
