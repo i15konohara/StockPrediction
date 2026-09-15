@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/index.html</loc></url>
+  <url><loc>https://example.com/predictions.html</loc></url>
+  <url><loc>https://example.com/models.html</loc></url>
+  <url><loc>https://example.com/keywords/イラン情勢.html</loc></url>
+  <url><loc>https://example.com/keywords/トランプ.html</loc></url>
+  <url><loc>https://example.com/keywords/高市早苗.html</loc></url>
+  <url><loc>https://example.com/models/nex-agi_nex-n2.5-mini_free.html</loc></url>
+  <url><loc>https://example.com/models/liquid_lfm-2.5-2.6b_free.html</loc></url>
+  <url><loc>https://example.com/models/nvidia_nemotron-3.5-lightning_free.html</loc></url>
+</urlset>

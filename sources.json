@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Google News",
+    "type": "query",
+    "url_template": "https://news.google.com/rss/search?q={query}&hl=ja&gl=JP&ceid=JP:ja"
+  },
+  {
+    "name": "Bing News",
+    "type": "query",
+    "url_template": "https://www.bing.com/news/search?q={query}&format=RSS"
+  },
+  {
+    "name": "NHKニュース 経済",
+    "type": "feed",
+    "url": "https://www3.nhk.or.jp/rss/news/cat5.xml"
+  },
+  {
+    "name": "Yahoo!ニュース 経済",
+    "type": "feed",
+    "url": "https://news.yahoo.co.jp/rss/categories/business.xml"
+  }
+]

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>モデル別予測精度 | ニュースまとめ</title>
+<meta name="description" content="複数のLLMモデルによる株価予測の精度比較">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="index.html">ニュースまとめ</a>
+  <p class="site-desc">キーワード別に自動収集・要約したニュースのまとめサイトです。</p>
+</header>
+<div class="ad-slot"><!-- 広告コード(Google AdSense等)をここに貼り付け --></div>
+<nav class="keyword-nav"><a href="index.html">トップ</a>
+<a href="predictions.html">株価予測ログ</a>
+<a href="models.html">モデル別精度</a>
+<a href="keywords/トランプ.html">トランプ (37)</a>
+<a href="keywords/高市早苗.html">高市早苗 (34)</a>
+<a href="keywords/イラン情勢.html">イラン情勢 (31)</a></nav>
+<main>
+
+    <section>
+      <h2>モデル別 予測精度比較</h2>
+      <p>複数のLLMモデルがそれぞれ独立に株価予測を行い、多数決で最終予測(<a href="predictions.html">株価予測ログ</a>)
+      を決定しています。ここでは各モデル単体の予測精度を比較できます。</p>
+      <div class="table-wrap">
+      <table class="prediction-table">
+        <thead><tr><th>モデル</th><th>予測件数</th><th>的中率</th></tr></thead>
+        <tbody>
+        
+    <tr>
+      <td><a href="models/nex-agi_nex-n2.5-mini_free.html">nex-agi/nex-n2.5-mini:free</a></td>
+      <td>54件</td>
+      <td>100.0%(12/12件)</td>
+    </tr>
+
+    <tr>
+      <td><a href="models/liquid_lfm-2.5-2.6b_free.html">liquid/lfm-2.5-2.6b:free</a></td>
+      <td>54件</td>
+      <td>91.7%(11/12件)</td>
+    </tr>
+
+    <tr>
+      <td><a href="models/nvidia_nemotron-3.5-lightning_free.html">nvidia/nemotron-3.5-lightning:free</a></td>
+      <td>60件</td>
+      <td>78.6%(11/14件)</td>
+    </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+</main>
+<div class="ad-slot"><!-- 広告コード(Google AdSense等)をここに貼り付け --></div>
+<footer class="site-footer">
+  <p>本サイトは自動収集・自動要約による参考情報のまとめです。内容の正確性は保証されません。詳細は各記事の出典元サイトをご確認ください。投資助言ではありません。</p>
+</footer>
+</body>
+</html>
