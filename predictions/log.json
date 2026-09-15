@@ -185,10 +185,10 @@
     "baseline_price": 64011.33984375,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 64011.33984375,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-14T03:44:19"
+    "actual_price": 63492.98828125,
+    "actual_date": "2026-09-14",
+    "actual_change_pct": -0.81,
+    "evaluated_at": "2026-09-15T16:12:04"
   },
   {
     "keyword": "イラン情勢",
@@ -272,10 +272,10 @@
     "baseline_price": 7656.97998046875,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 7656.97998046875,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-14T03:44:19"
+    "actual_price": 7619.97998046875,
+    "actual_date": "2026-09-14",
+    "actual_change_pct": -0.48,
+    "evaluated_at": "2026-09-15T16:12:05"
   },
   {
     "keyword": "イラン情勢",
@@ -359,10 +359,10 @@
     "baseline_price": 64011.33984375,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 64011.33984375,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-14T03:44:19"
+    "actual_price": 63492.98828125,
+    "actual_date": "2026-09-14",
+    "actual_change_pct": -0.81,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "トランプ",
@@ -446,10 +446,10 @@
     "baseline_price": 7656.97998046875,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 7656.97998046875,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-14T03:44:19"
+    "actual_price": 7619.97998046875,
+    "actual_date": "2026-09-14",
+    "actual_change_pct": -0.48,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "トランプ",
@@ -533,10 +533,10 @@
     "baseline_price": 64011.33984375,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 64011.33984375,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-14T03:44:19"
+    "actual_price": 63492.98828125,
+    "actual_date": "2026-09-14",
+    "actual_change_pct": -0.81,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "高市早苗",
@@ -620,10 +620,10 @@
     "baseline_price": 7656.97998046875,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 7656.97998046875,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-14T03:44:20"
+    "actual_price": 7619.97998046875,
+    "actual_date": "2026-09-14",
+    "actual_change_pct": -0.48,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "高市早苗",
@@ -707,10 +707,10 @@
     "baseline_price": 64011.33984375,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 64011.33984375,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-15T03:19:36"
+    "actual_price": 63484.1015625,
+    "actual_date": "2026-09-15",
+    "actual_change_pct": -0.82,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "イラン情勢",
@@ -881,10 +881,10 @@
     "baseline_price": 64011.33984375,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 64011.33984375,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-15T03:19:36"
+    "actual_price": 63484.1015625,
+    "actual_date": "2026-09-15",
+    "actual_change_pct": -0.82,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "トランプ",
@@ -1055,10 +1055,10 @@
     "baseline_price": 64011.33984375,
     "baseline_date": "2026-09-11",
     "outcome": "hit",
-    "actual_price": 64011.33984375,
-    "actual_date": "2026-09-11",
-    "actual_change_pct": 0.0,
-    "evaluated_at": "2026-09-15T03:19:36"
+    "actual_price": 63484.1015625,
+    "actual_date": "2026-09-15",
+    "actual_change_pct": -0.82,
+    "evaluated_at": "2026-09-15T16:12:06"
   },
   {
     "keyword": "高市早苗",

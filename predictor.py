@@ -333,6 +333,17 @@ def evaluate_due_predictions(records: list[dict]) -> int:
             continue
 
         actual_price, actual_date = result
+
+        if actual_date == rec.get("baseline_date"):
+            # 対象日がまだ取引されていない(週末・休場等)ため、基準日と同じ終値しか
+            # 取得できていない。実際の値動きがまだ無いので判定を保留し、後日再評価する。
+            # ただし取引日が現れないまま長期間経過した場合はデータなし扱いにする。
+            if (today - target_date).days >= 10:
+                rec["outcome"] = "no_data"
+                rec["evaluated_at"] = now_str
+                updated += 1
+            continue
+
         change_pct = (actual_price - rec["baseline_price"]) / rec["baseline_price"] * 100
         actual_direction = "positive" if change_pct > 0 else "negative"
 
