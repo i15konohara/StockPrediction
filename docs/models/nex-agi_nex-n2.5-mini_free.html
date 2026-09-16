@@ -16,14 +16,104 @@
 <nav class="keyword-nav"><a href="../index.html">トップ</a>
 <a href="../predictions.html">株価予測ログ</a>
 <a href="../models.html">モデル別精度</a>
-<a href="../keywords/トランプ.html">トランプ (45)</a>
-<a href="../keywords/高市早苗.html">高市早苗 (42)</a>
-<a href="../keywords/イラン情勢.html">イラン情勢 (37)</a></nav>
+<a href="../keywords/トランプ.html">トランプ (88)</a>
+<a href="../keywords/高市早苗.html">高市早苗 (83)</a>
+<a href="../keywords/イラン情勢.html">イラン情勢 (74)</a></nav>
 <main>
 
         <section>
           <h2>nex-agi/nex-n2.5-mini:free の予測ログ</h2>
-          <ul class='accuracy-list'><li>このモデル: 的中率 77.8%(14/18件)</li></ul>
+          <ul class='accuracy-list'><li>このモデル: 的中率 75.0%(18/24件)</li></ul>
+          
+    <div class="filter-bar" data-table-selector=".prediction-table">
+      <div class="filter-field">
+        <label for="filter-date-from">予測日時(開始)</label>
+        <input type="date" id="filter-date-from">
+      </div>
+      <div class="filter-field">
+        <label for="filter-date-to">予測日時(終了)</label>
+        <input type="date" id="filter-date-to">
+      </div>
+      <div class="filter-field">
+        <label for="filter-keyword">キーワード</label>
+        <select id="filter-keyword">
+          <option value="">すべて</option>
+          <option value="イラン情勢">イラン情勢</option>
+<option value="トランプ">トランプ</option>
+<option value="高市早苗">高市早苗</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-market">市場</label>
+        <select id="filter-market">
+          <option value="">すべて</option>
+          <option value="japan">日本株(日経平均)</option>
+<option value="us">米国株(S&amp;P500)</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-horizon">期間</label>
+        <select id="filter-horizon">
+          <option value="">すべて</option>
+          <option value="tomorrow">明日</option>
+<option value="1week">1週間後</option>
+<option value="1month">1か月後</option>
+        </select>
+      </div>
+      <button type="button" id="filter-reset" class="filter-reset">リセット</button>
+    </div>
+    <p id="filter-count" class="filter-count"></p>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var bar = document.querySelector('.filter-bar');
+      if (!bar) return;
+      var table = document.querySelector(bar.getAttribute('data-table-selector'));
+      if (!table) return;
+      var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr[data-keyword]'));
+      var total = rows.length;
+      var dateFrom = document.getElementById('filter-date-from');
+      var dateTo = document.getElementById('filter-date-to');
+      var keywordSel = document.getElementById('filter-keyword');
+      var marketSel = document.getElementById('filter-market');
+      var horizonSel = document.getElementById('filter-horizon');
+      var resetBtn = document.getElementById('filter-reset');
+      var countEl = document.getElementById('filter-count');
+
+      function applyFilters() {
+        var kw = keywordSel.value;
+        var mk = marketSel.value;
+        var hz = horizonSel.value;
+        var from = dateFrom.value;
+        var to = dateTo.value;
+        var visible = 0;
+        rows.forEach(function(row) {
+          var d = row.getAttribute('data-date');
+          var ok = true;
+          if (kw && row.getAttribute('data-keyword') !== kw) ok = false;
+          if (ok && mk && row.getAttribute('data-market') !== mk) ok = false;
+          if (ok && hz && row.getAttribute('data-horizon') !== hz) ok = false;
+          if (ok && from && d < from) ok = false;
+          if (ok && to && d > to) ok = false;
+          row.style.display = ok ? '' : 'none';
+          if (ok) visible++;
+        });
+        countEl.textContent = visible + '件表示中 / 全' + total + '件';
+      }
+
+      [dateFrom, dateTo, keywordSel, marketSel, horizonSel].forEach(function(el) {
+        el.addEventListener('change', applyFilters);
+      });
+      resetBtn.addEventListener('click', function() {
+        dateFrom.value = '';
+        dateTo.value = '';
+        keywordSel.value = '';
+        marketSel.value = '';
+        horizonSel.value = '';
+        applyFilters();
+      });
+      applyFilters();
+    });
+    </script>
           <div class="table-wrap">
           <table class="prediction-table">
             <thead>
@@ -34,18 +124,150 @@
             </thead>
             <tbody>
             
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">原油高・海運不安・リスク回避の流れが続き、輸入コスト上昇懸念から日本株全体には重し。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-24</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ海峡周辺での米イラン応酬や原油供給不安が長期化し、日経平均は下押し圧力を受けやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-17</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">中東情勢の長期化と石油供給途絶懸念により、エネルギー価格上昇、輸出減速、景気減速不安が日本株に波及しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">地政学リスクと原油高によるインフレ・金利上昇懸念から、米株全体ではリスク回避の流れが強まりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-24</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランとの協議拒否や軍施設損傷・弾薬枯渇の報告が緊張継続を示唆し、原油高を背景にNASDAQ・景気敏感株にも圧迫要因。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-17</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米中間選挙前の政治的配慮で拡大抑制の可能性はあるものの、中東情勢の不安定化とエネルギー価格上昇が続けば市場全体の下振れリスクが高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">政権の骨格維持や高支持率は支えるが、国債40兆円発言、長期金利上昇懸念、財政膨張への警戒が直近材料として強く、日経平均は1週間で下落している。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-24</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">積極財政や成長投資は材料だが、財政健全性への不安、消費税減税論、中国・靖国をめぐるリスクが重荷となり、直近1週間の下落トレンドを続伸しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-17</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">支持率60台、沖縄知事選で与党推薦候補が当選、政権継続、成長投資・AIデジタル・復興防災への政策集中が内需・設備投資に好材料。財政・金利懸念は上値制約だが、1か月下落後の反発余地がある。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米国市場への直接影響は限定的だが、日本の財政・長期金利懸念と東アジアリスクが世界リスク選好を下げやすく、S&amp;P500は直近1日で下落している。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-24</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日本株・米国株とも直近1週間で下落しており、日本発の国債・金利上昇懸念がグローバルな金利上昇期待を通じて米株評価額を圧迫しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-17">
+      <td>2026-09-17 03:24</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-17</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日本での積極財政は需要効果を持つ一方、国債増発への警戒、長期金利上昇、中国緊張が世界市場のリスクプレミアムを上昇させやすく、S&amp;P500全体には重しとなりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ</td>
       <td class="reason-cell">中東情勢の緊迫化と原油高により、リスク回避志向と輸入コスト増が広がしやすい。</td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.01%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -56,7 +278,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -67,18 +289,18 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ</td>
       <td class="reason-cell">中東情勢の悪化により、リスクオフと原油高を通じて株式全体が下押しされやすい。</td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.33%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -89,7 +311,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -100,18 +322,18 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ</td>
       <td class="reason-cell">ホルムズ海峡をめぐる地政学リスクと原油高懸念が日本市場全体を重くし、米国株のAI材料のプラス効果は限定的と判断。</td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.01%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -122,7 +344,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -133,18 +355,18 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📈 ポジティブ</td>
       <td class="reason-cell">AI規制強化への反対はAI・半導体・クラウド株の収益期待を押し上げ、短期的な市場心理を改善させる。</td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>+0.33%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -155,7 +377,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -166,18 +388,18 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📈 ポジティブ</td>
       <td class="reason-cell">高内閣の支持率が高く、政策継続への信頼感が市場安心材料となる。</td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-0.01%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -188,7 +410,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -199,18 +421,18 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📈 ポジティブ</td>
       <td class="reason-cell">日本の政治安定はアジア全体のリスク選好をわずかに押し上げ、米国市場にも小幅にプラス。</td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>+0.33%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -221,7 +443,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-16">
       <td>2026-09-16 03:28</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -232,7 +454,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -243,7 +465,7 @@
       <td>-0.81%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -254,7 +476,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -265,7 +487,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -276,7 +498,7 @@
       <td>-0.64%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -287,7 +509,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -298,7 +520,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -309,7 +531,7 @@
       <td>-0.81%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -320,7 +542,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -331,7 +553,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -342,7 +564,7 @@
       <td>-0.64%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -353,7 +575,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -364,7 +586,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -375,7 +597,7 @@
       <td>-0.81%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -386,7 +608,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -397,7 +619,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -408,7 +630,7 @@
       <td>-0.64%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -419,7 +641,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-15">
       <td>2026-09-15 03:19</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -430,7 +652,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -441,7 +663,7 @@
       <td>-0.82%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -452,7 +674,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -463,7 +685,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -474,7 +696,7 @@
       <td>-0.27%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -485,7 +707,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -496,7 +718,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -507,7 +729,7 @@
       <td>-0.82%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -518,7 +740,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -529,7 +751,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -540,7 +762,7 @@
       <td>-0.27%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -551,7 +773,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -562,7 +784,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -573,7 +795,7 @@
       <td>-0.82%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -584,7 +806,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -595,7 +817,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -606,7 +828,7 @@
       <td>-0.27%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -617,7 +839,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-14">
       <td>2026-09-14 03:44</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -628,7 +850,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -639,7 +861,7 @@
       <td>-0.81%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -650,7 +872,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>日本株(日経平均)</td>
@@ -661,7 +883,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -672,7 +894,7 @@
       <td>-0.48%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -683,7 +905,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -694,7 +916,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -705,7 +927,7 @@
       <td>-0.81%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -716,7 +938,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>日本株(日経平均)</td>
@@ -727,7 +949,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -738,7 +960,7 @@
       <td>-0.48%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -749,7 +971,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/トランプ.html">トランプ</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -760,7 +982,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -771,7 +993,7 @@
       <td>-0.81%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -782,7 +1004,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>日本株(日経平均)</td>
@@ -793,7 +1015,7 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -804,7 +1026,7 @@
       <td>-0.48%</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
@@ -815,13 +1037,1663 @@
       <td>-</td>
     </tr>
 
-    <tr>
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-13">
       <td>2026-09-13 03:35</td>
       <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
       <td>米国株(S&amp;P500)</td>
       <td>1か月後<br><span class="card-meta">対象日: 2026-10-13</span></td>
       <td>📉 ネガティブ</td>
       <td class="reason-cell">日本経済の物価・金利リスクが継続すると、全球株市場のリスク選好が後退し、米国株にも間接的にマイナスとなりやすいため</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ周辺のタンカー攻撃応酬と原油高・海運不安の再拡大で、資源輸入国である日本はコスト増とリスクオフになりやすく、直近1日も日経平均は下落した。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米・イスラエルとイランの報復合戦が長期化し、原油価格・金利上昇が見込まれるため、日本株全体には業績悪化懸念とリスク回避材料が残る。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で日経平均は大きく下落しており、中東情勢の長期化による原油高、海運コスト増、金利上昇が企業業績や市場評価を圧迫しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は前日反発したが、トランプ氏の「中間選挙後まで戦闘継続」見通しと原油・金利急上昇は、短期的なリスクオフ要因となりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は下落基調で、ホルムズ情勢の悪化がエネルギー価格と金利を押し上げ、成長株中心の米国株全体には逆風となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月もS&amp;P500は下落しており、中東供給不安の長期化によるインフレ再燃、金利上昇、企業業績見通しの下方修正懸念が市場を圧迫しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">内閣広報費72億円要求への批判、消費税減税や国債・長期金利への懸念が直近下落を押しやすく、閣改造前の不確実性も残る</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">支持率維持や政権骨格の継続は底堅さ要因だが、財政健全性への疑念、広報費問題、閣改造をめぐる不確実性が上振れ材料を上回る</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">積極財政や成長投資の追い風がある一方、国債40兆円発言、長期金利上昇懸念、政治・広報への不信が1か月下落傾向を継続させやすい</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">米国市場は直近1日で反発しており、日本の国内政治問題の直接影響は限定的。日本株下落の波及はあってもS&amp;P全体への打撃は軽微とみられる</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日本発の財政懸念による円・長期金利上昇やリスク回避が全球株に軽微な重しとなり、米市場も直近1週間の下落傾向を続けやすい</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-12">
+      <td>2026-09-12 10:26</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米市場自体の1か月下落に加え、日本の財政拡大と金利上昇懸念が海外リスク選好を鈍らせる可能性がある</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-11">
+      <td>2026-09-11 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">支持率の高さや政権骨格維持材料はあるが、内閣改造・不記載議員起用・石井参院幹事長や林総務相の処遇不確実性、財政・長期金利懸念が重なり、直近1日の下落局面を継続しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-11">
+      <td>2026-09-11 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">沖縄知事選の当選や積極財政は下支え材料だが、1週間で下落基調であり、人事・派閥・財政健全性をめぐる論点が強く、回復は慎重になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-11">
+      <td>2026-09-11 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で大幅下落で安値近辺にあり、支持率維持以上に消費税減税論、国債40兆円発言、長期金利上昇や予算膨張への警戒感が上値を抑えやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-11">
+      <td>2026-09-11 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-12</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">高市内閣関連情報は米国市場への直接打撃は限定的で、S&amp;P500は直近1日で反発しているため、短期的には前日勢いを踏襲しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-11">
+      <td>2026-09-11 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米国指数は1週間で下落基調で、日本の政治・財政不確実性がアジア全体のリスク選好を弱める可能性があり、材料不足なら調整方向になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-11">
+      <td>2026-09-11 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は1か月で下落しており、高市内閣の積極財政・国債懸念が世界的な金利上昇警戒を再生しやすいため、中期的には上値を抑えやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-10">
+      <td>2026-09-10 12:24</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">トランプ氏の追加関税方針やイラン情勢をめぐる原油高リスクが、海外景気・リスク選好に圧力となりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-10">
+      <td>2026-09-10 12:24</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-17</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">中間選挙向けの保護主義的政策観測と地政学リスクが根強く、直近1週間で反発しても上値は制約されやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-10">
+      <td>2026-09-10 12:24</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">関税拡大、財政負担、外交緊張が日本株の輸出産業や市場全体に重く作用し、直近1か月で下落している流れも継続しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-10">
+      <td>2026-09-10 12:24</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">共和党大会による政治的熱気がある一方、イラン情勢と原油高リスク、追加関税への警戒感が上回る可能性がある。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-10">
+      <td>2026-09-10 12:24</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-17</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">選挙前の政策不確実性、対中・対カナダ摩擦、財政負担への批判がS&amp;P500の足元下落材料となりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-10">
+      <td>2026-09-10 12:24</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">保護主義的関税、地政学リスク、インフレ・金利への懸念が継続し、直近1か月で下落している米国株全体には重荷となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ海峡周辺の船舶攻撃や原油100ドル突破で、エネルギー輸入国である日本のコスト増・リスク回避売りにつながりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-16</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米・イランの応酬長期化と原油高・金利上昇の懸念が、日経平均の直近1か月下落材料をさらに強める可能性が高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">原油供給不安が長期化すれば日本株全体は企業業績悪化懸念とリスク回避の流れになりやすく、中期的には下落方向と判断。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">原油価格急上昇と金利上昇、中東リスクによるリスクオフでS&amp;P500は短期的に下落しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-16</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">船舶攻撃の継続報道やトランプ氏の戦闘長期化示唆により、株式市場の警戒感とインフレ懸念が強まる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">原油高による物価・金利上昇圧力と企業利益悪化懸念が長期化し、米国株全体にはネガティブ材料となりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日経平均は直近1日で下落し、安値寄り。イラン情勢の長期化示唆や原油高、大型5000ドル公約に伴う世界的なリスク回避が輸出株にも重しになる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-16</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は小幅上昇だが、高値から退き、1か月では下落基調。選挙向けの財政負担、保護主義的政策、中東リスクが上値を抑える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で下落しており、高値から距離がある。財政悪化・金利上昇懸念、原油高、対外摩擦が続けば日本株全体には下押し要因となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は直近1日で下落し、安値圏。イラン戦争の長期化示唆と大型給付公約が、リスク回避・財政赤字・インフレ懸念を強める。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-16</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間はほぼ横ばいだが、高値から弱く、月足でも下落。中間選挙を前にした政策不確実性、関税・財政負担・中東リスクが上値を制約する。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-09">
+      <td>2026-09-09 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で下落基調。5000ドル支給の財源懸念、FRBへの圧力、追加関税、イラン情勢長期化が企業収益や金利見通しに負担を与える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日経平均は直近1日で大きく下落しており、イラン情勢悪化と原油高止まりが上値を抑制する見込み。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-15</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は下落基調で、ホルムズ海峡・紅海周辺の安全保障リスクが原油高を通じて日本株全体に重しになると考えられる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月も中東情勢の長期化と石油供給不安が続けば、輸入コスト上昇や景気減速懸念から日本株全体は下押し压力を受けやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">最新ニュースでも米株式市場の続落が報じられており、イラン情勢悪化による原油高警戒感が強まりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-15</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は小幅下落だが、船舶攻撃や海峡緊張の拡大により、原油高を背景にしたリスク回避と企業業績への悪影響が懸念される。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月は中東情勢の長期化、原油高、金利上昇懸念が続けばS&amp;P500全体にはネガティブ要因が継続しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米中間選挙の暗雲、カナダ製品禁輸・報復関税、中国・台湾リスクでリスク回避志向が強まり、日経平均は直近1日で下落基調</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-15</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">保護主義的貿易政策と米中対立の不透明感が継続し、輸出企業や市場全体に圧迫がかかる見込み</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">関税強化、原油高リスク、FRB利下げ要求、選挙向け大型公約の財政懸念が重なり、1か月で高値から反落気味</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">カナダ製品禁輸や中国AI規制緩和をめぐる批判、中間選挙の不安が投資家心理を悪化させる可能性</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-15</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">共和党への暗雲、報復関税対応、地図投稿問題などで政治リスクと市場の不確実性が高まる</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-08">
+      <td>2026-09-08 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">保護主義政策、中国・台湾リスク、財政負担懸念、FRBとの対立がS&amp;P500に上振れの余地を制限する見込み</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランの湾岸の米エネルギー資産への報復警告やホルムズ海峡制限区域構想により、原油・海運リスクが高まり、リスクオフとコスト増懸念から日本株全体には重し。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-14</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">直近1週間は小幅プラスでも、船舶攻撃やサウジ被害の拡大で中東緊張が長期化しやすく、原油高による輸送費・エネルギーコスト上昇が日本企業業績を圧迫。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で日本株は小幅プラスでも、ホルムズ海峡をめぐる対立拡大と石油供給途絶懸念が続くため、原油高・金利上昇・景気減速懸念が上値を制約。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランによる米エネルギー資産への警告と米国の反発必至感から、リスク回避、原油高、インフレ再懸念が高まり、S&amp;P500全体には下落方向。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-14</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">直近1週間は横ばいだが、米イラン応酬やサウジへの被害報道でエネルギー・海運不安が再燃しやすく、金利上昇と景気減速懸念から下落リスクが高まる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で米国株はほぼ横ばいだが、湾岸エネルギー資産への報復警告や地域拡大の兆候によりリスクプレミアムが上昇し、市場全体の上振れは限定的。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">日経平均は直近1日で+2.12%と上昇基調だが、米金利上昇観測や原油高リスクは抑圧要因。直近の買い気勢を優先すれば小幅上昇方向。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-14</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は+0.13%でほぼ横ばい。FRB利上げ観測、追加関税、財政負担懸念、イラン情勢による原油高が上値を抑える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月は+1.09%と小幅上昇だが、高値には届いておらず、保護主義的関税政策・金利上昇・外交リスクが中期的な重しとなる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は直近1日で-0.38%。FRB利上げ観測の高まりにトランプ氏が反発する構図が、金利上昇と株価評価額への圧迫につながる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-14</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は+0.09%で横ばいだが、高金利観測、選挙対策の財政負担、関税強化、法的対立がリスク選好を弱める。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-07">
+      <td>2026-09-07 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月は+0.11%とほぼ横ばい。FRB利上げ観測、追加関税、イラン情勢、大統領権限をめぐる対立が中期的な下落リスクとなる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イラン情勢の停滞、ホルムズ海峡周辺の制限区域構想、米軍とイランの応酬継続により、原油高・リスク回避志向が強まり、日本株には下方圧力となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">直近1週間で日経平均は下落しており、石油輸入国である日本は原油高や海運不安の影響を受けやすく、中東リスクが続けば警戒感が高まる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-06</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランの譲歩が不透明で、ホルムズ海峡周辺の緊張が長期化すれば、原油供給不安とインフレ・金利上昇懸念が日本株の企業業績を圧迫する。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米軍によるイランタンカー攻撃への応酬や、米国の反発が予想されるホルムズ海峡の制限区域構想により、短期的なリスク回避売りが強まる可能性が高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は直近1週間でほぼ横ばいだが、最新ニュースでは軍事対立と原油供給不安が再燃しており、今週は警戒感から下落方向になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-06</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イラン情勢の長期化は原油高を通じて米インフレと金利上昇リスクを高める一方、企業収益や景気見通しに悪影響を与え、米国株全体にはマイナス要因となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">直近1日は反発したが、政治資金規正法疑い・隠蔽工作、靖国・外交配慮論、人事不確実性が重なり、短期のリスク選好を弱める。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は-2.09%で調整局面。支持率や積極財政は支えるが、政治手法への疑念、ポスト高市論、財政・長期金利懸念が上値を抑える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-06</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月は-1.93%で高値から遠く、政権支持の安定と成長投資があっても、政治とカネ、財政健全性、地域外交リスクが中期的な下落圧力となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-07</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P 500は直近1日で-0.38%。日本政治のスキャンダルと靖国・中国関係の不確実性が、全球のリスク選好をわずかに下押しする。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-13</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P 500は1週間でほぼ横ばい小幅プラス。日本の政治問題は米国市場への直接打撃が限定的で、トランプ氏接触模索が米日協調材料として働けば上振れ余地が残る。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-06">
+      <td>2026-09-06 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-06</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P 500は1か月も小幅プラス圏で大幅な下落基調ではない。日本固有の政治・外交リスクは間接的であり、米国市場全体には限定的な下押しにとどまりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-06</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ海峡周辺の報復応酬と供給不安により、原油高・リスク回避が強まり、原油輸入国の日本市場には下押し要因。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">船舶攻撃や原油供給停止懸念が続き、エネルギーコスト上昇と企業業績悪化への警戒から下落方向。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">中東緊張の長期化により原油・海運費上昇とインフレ再燃が懸念され、日本株の利益環境を悪化させる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-06</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米軍とイランの応酬でリスク回避勢が増え、原油高と供給不安がS&amp;P500に下押し圧力となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米中関係の安定材料はあるものの、中東情勢の長期化はエネルギー価格上昇と景気減速懸念を通じて株式市場を圧迫。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ海峡周辺の緊張が続けば、エネルギーコスト・金利上昇・企業業績悪化の懸念が高まり、米株全体にはネガティブ。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-06</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">内閣骨格の維持や積極財政継続が物価高対策・成長投資期待につながり、短期的にはリスク選好を維持しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">予算膨張、国債40兆円発言、長期金利上昇懸念が意識されやすく、直近1週間で日経平均が下落している流れを踏むと上値は限定されやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">支持率の高さや政策継続は支える一方、財政健全性への懸念、政治・広報をめぐる不信感、長期金利上昇リスクが1か月では材料化しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-06</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日本株への短期的なプラス材料はあるが、日本の積極財政と長期金利上昇懸念は全球金利上昇圧力となり、米国株には轻微な重しになりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-12</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は直近1週間でほぼ横ばいだが、日本の財政懸念や長期金利上昇リスクが米株のバリュエーションに小幅な下押し圧力を与える可能性がある。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-05">
+      <td>2026-09-05 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日本発の財政拡張は世界成長にプラスでも、国債増発・長期金利上昇は米国株にとって金利上昇シナリオとなり、1か月ではネガティブに働きやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランが米軍基地に報復し、商船攻撃停止要求が出るなど緊張が再燃。原油・海運リスクと輸入国日本への影響でリスク回避売りが出やすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ海峡周辺の応酬と原油供給不安が続き、日経平均は1週間で下落。防衛省の無人機・AI分析は安保強化を示すが、市場全体にはコスト増・リスクプレミアム上昇圧力。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月も日経は下落基調で、中東情勢の長期化はエネルギー価格・輸送費上昇を通じて日本企業業績を圧迫。防衛・AI関連は追い風でも全体を相殺しにくい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米軍基地への報復や商船攻撃をめぐる対立でリスクオフ。S&amp;Pは前日下落で、原油高とインフレ再懸念が投資家心理を重くする。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">船舶攻撃や原油パイプライン停止報道があり、海運・エネルギー供給不安が拡大。S&amp;Pは1週間でほぼ横ばいだが、有事リスクと金利上昇懸念が上値を抑える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月でS&amp;Pは小幅プラスでも、米イラン対立の長期化と原油高は消費・景気・金利に負担。AI・防衛投資の期待はあるが、市場全体には不確実性優位。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">NYダウは前日反発したが、1週間・1か月では下落基調。トランプ氏のFRB圧力と報復関税示唆、イラン情勢のリスクが日本株全体に重圧となりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日経平均は高値圏から遠ざかり、週間も1か月も下落。米株の政策不確実性、原油高、保護主義的政策への警戒から回復は限定的とみられる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">大型公約による財政負担懸念、FRBへの圧力、追加関税・貿易摩擦、イラン情勢の長期化リスクが、輸出企業中心の日経平均にマイナス。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">FRB利下げ要求と貿易停止示唆、出生地主義命令の差し止め、イラン紛争への矮小化発言が市場の不確実性を高め、S&amp;P500には短期的な下落圧力。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は1週間・1か月ともほぼ横ばいだが、最新ニュースはFRB独立性・外交リスク・国内対立の観点でネガティブ。中国との缓和材料を上回る警戒感。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">中間選挙を前にした大型公約、財政悪化懸念、関税・FRBをめぐる政策不確実性、イラン情勢のリスクが継続し、米株全体の上振れ材料は限定的。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">閣僚留任や沖縄知事選勝利は安定材料だが、靖国遥拝をめぐる批判、公明党との関係不安、支持率低下、財政・長期金利懸念が直近の上昇を制束しそうだ。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日経平均は1週間で下落しており、積極財政や成長投資は支え材料だが、政治手法への疑念、政権与党内の調整、財政健全性への懸念が重荷となりそうだ。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月も日経平均は小幅下落で、政権の安定感は残るものの、国債40兆円発言、長期金利上昇、予算膨張、広報・政治スタイルへの疑問がリスク選好を鈍らせる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-05</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米国株への直接影響は限定的だが、日本の政治・安全保障上の緊張や財政懸念がアジア市場のリスク選好を弱め、S&amp;P500の直近下落を重くする可能性がある。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-11</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P500は1週間でほぼ横ばい〜小幅プラスで、高市政権関連ニュースは米株には二次的な材料にとどまる見込み。米株自体のレジリエンスが優勢だ。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-04">
+      <td>2026-09-04 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-04</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P500は1か月で小幅プラス圏を維持しており、高市政権の政策影響は主に日本市場向け。日本の金利上昇懸念はあるが、米株全体を大きく下押しする材料とは判断しにくい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランの報復とトランプ氏の警告、原油・海運リスクでリスク回避が優勢。日経は前日安で直近安値近くだ。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間で-2.90%と弱く、ホルムズ海峡周辺の緊張拡大と原油高が輸入国日本の投資心理・企業業績を圧迫。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-03</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月はややプラスでも上昇幅は小さく、紛争長期化・エネルギーコスト上昇・安全保障上の不確実性が上材料を上回る見込み。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランの報復と攻撃激化警告は原油高・インフレ懸念を通じて短期的なリスクオフ要因。S&amp;Pは前日反発したが警戒感が戻る可能性。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は小幅プラスでもほぼ横ばいで、船舶攻撃・原油供給不安が継続すれば業績・金利見通しに重し。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-03</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;Pは1か月で小幅プラス・高値圏にあり、11月までの紛争激化回避観測が近中期の下押しを抑える可能性。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-04</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">直近1日は日経平均が前日比0.17%安で、低空飛行・物価不満警戒・公明の政権復帰拒否・中国批判が上値を抑える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は2.90%安で弱く、政権骨格維持は安定材料だが、政治手法・財政懸念・対中緊張がリスクとして残る。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-03</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月は小幅プラスでも高値から反発は弱く、積極財政・国債・長期金利懸念と政治的不安定感が上値を制約する。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-04</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P500は1日で1.06%高と明確な強さがあり、日本政治リスクの米国市場への直接影響は限定的と判断する。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-10</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">1週間は0.22%高で緩やかな上昇基調を維持しており、日本発の地政学リスクは限定的な下押し材料にとどまる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-03">
+      <td>2026-09-03 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-03</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">1か月は0.31%高で横ばい寄りのプラス、米国市場自体の勢いは弱くない一方、対中緊張は小幅な警戒材料にとどまる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-03</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランの報復とトランプ氏の激化警告、ホルムズ海峡・原油供給不安が再燃し、日経平均は1日で-2.85%・週で-2.92%とリスク回避が強まっている。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">船舶攻撃、サウジ被害、原油パイプライン停止報道が続く限り、原油高・海運コスト上昇が日本企業の業績を圧迫し、日経は週足でも下落基調。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で日経は小幅プラスでも、中東紛争の長期化と原油高は輸入資源国である日本に物価・コスト面で逆風。選挙前の米政権自制は緩和材料だが、供給不安は残る。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-03</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">イランの報復と米側の再攻撃・激化警告はリスク回避を招く。S&amp;P500は前日反発したが、週・月では弱く、原油高は成長期待と金利見通しに逆風。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">ホルムズ周辺で応酬が続けば原油・海運リスクが高まり、S&amp;P500は週足で小幅下落後も下落材料が先行しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-02</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">11月選挙まで米政権が紛争激化を回避する可能性が高く、直近下落分を材料視する反発余地がある。다만原油高は上限要因。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-03</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日経平均は前日-2.85%と大幅安で、高値から反落しており、中東原油高・関税・選挙不安によるリスク回避が続く可能性が高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間で-2.92%と弱く、トランプ氏の保護主義的政策、財政負担懸念、イラン情勢の長期リスクが上値を抑えやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月で小幅プラスでも高値から大きく反落しており、選挙向け大型支出、対外強硬策、原油高警戒感が中期的な重しになる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-03</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P500は前日+0.46%と反発しており、トランプ硬貨の完売や11月までのイラン激化回避方針が短期的なリスク感を下げる材料になる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">1週間はほぼ横ばいだが、最新ニュースでは選挙前のイラン攻撃抑制やトランプ支持層の強さが示され、警戒感の緩和が期待できる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月でS&amp;P500は-0.90%と弱く、選挙向けの大型支出、FRB圧力、追加関税が中期的な上値制約になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-03</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">前日-2.85%で売られ、支持率上向いた後の失速、物価高への不満、財政・金利懸念が重荷となりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間で-2.92%と弱く、国債40兆円発言や長期金利上昇への警戒が続く一方、政権骨格維持は限定的な支撑材料にとどまる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月はやや上昇でも高値から大きく低下。積極財政や成長投資は材料だが、財政健全性・金利上昇・政治手法への疑念が上値を抑える。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-03</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">S&amp;P500は前日+0.46%で反発しており、日本の政治・財政材料は米国市場への直接影響が限定的で、短期的な強さを優先しやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-09</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は-0.12%で足踏み気味。日本株の弱さや日中批判、金利上昇懸念が全球リスク選好をわずかに下押ししやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-02">
+      <td>2026-09-02 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月は-0.90%で低下。日本固有の材料だが、財政・金利懸念と地政学リスクが米国株の上振れを抑える可能性が高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米イランの攻撃応酬、ホルムズ海峡周辺の船舶・原油供給リスク、原油高による輸入コスト増がリスク回避を強める見込み。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">直近1週間は小幅上昇でも、トランプ氏の激化警告や官房長官の深刻な懸念表明により、原油高・海運不安・業績悪化懸念が優勢になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-01</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月上昇でも、地域緊張の長期化による原油・輸送費上昇、金利上昇、企業業績への悪影響が続く可能性が高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">NYダウ続落、原油高、米金利上昇への警戒があり、米軍・米国関連への攻撃報道もリスク回避を強める見込み。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500も1週間で下落しており、米イラン直接対立の長期化と金利上昇が重荷になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-01</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月はやや上昇だが、ホルムズ海峡の供給不安、インフレ・金利上昇、軍事リスクが企業業績とバリュエーションを圧迫する。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日経平均は前日小幅安で直近高値を付かず、最新ニュースのトランプ氏による企業・制度への圧力や北朝鮮核言及の不確実性がリスク選好を弱めるため。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は小幅プラスでも、追加関税・財政負担懸念・地政学リスクが継続し、日本株全体の上値を抑える方向になりやすいため。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-01</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月はやや上昇しているが、通商摩擦、保護主義的政策、財政出動への反発が中期的な下押し材料となりやすいため。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">S&amp;P500は前日安値圏寄りに反落しており、Appleへの圧力、トランプ硬貨発行をめぐる法制度懸念、北朝鮮核問題の言及が短期的なリスク回避を招くため。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1週間は下落基調で、選挙向けの大型公約・財政懸念、対カナダ・対中強硬策、制度的対立が米株上値を制約するため。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-01</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">1か月はややプラスでも高値圏で足踏み気味で、関税、FRBへの圧力、財政負担、地政学リスクが中期的にネガティブに働きやすいため。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">長期金利3%への高市財政への異論や答弁拒否批判が、直近1日の小幅安を補強する可能性が高い。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">沖縄知事選で推薦候補が当選し、内閣骨格維持や成長投資期待から政局安定感が上回る可能性。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-01</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">1か月プラス推移と積極財政・AI・デジタル投資期待が株価を支える一方、長期金利上昇は上値制約となる。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-02</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">日本側で金利・財政懸念が表面化し、S&amp;P500も直近1日が下落ため、リスク回避材料になりやすい。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-08</span></td>
+      <td>📉 ネガティブ</td>
+      <td class="reason-cell">米株は1週間で下落基調で、日本の長期金利3%論争が全球リスク選好を鈍らせる可能性がある。</td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-01">
+      <td>2026-09-01 12:00</td>
+      <td><a href="../keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-01</span></td>
+      <td>📈 ポジティブ</td>
+      <td class="reason-cell">米株は1か月小幅プラスで、日本の政局安定と成長投資期待が世界需要にプラス材料与える。</td>
       <td>⏳ 判定待ち</td>
       <td>-</td>
     </tr>

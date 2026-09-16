@@ -236,10 +236,15 @@ def render_accuracy_stat(label: str, stats: dict) -> str:
 
 def render_prediction_row(rec: dict, asset_prefix: str = "") -> str:
     """1モデル単体の予測1件を表示する行(reasonは単一文字列)"""
-    keyword_slug = html.escape(slugify(rec.get("keyword", "")), quote=True)
-    keyword = html.escape(rec.get("keyword", ""))
-    market = html.escape(rec.get("market_label", rec.get("market", "")))
-    horizon = html.escape(rec.get("horizon_label", rec.get("horizon", "")))
+    keyword_raw = rec.get("keyword", "")
+    market_raw = rec.get("market", "")
+    horizon_raw = rec.get("horizon", "")
+    date_raw = rec.get("predicted_at", "")[:10]
+
+    keyword_slug = html.escape(slugify(keyword_raw), quote=True)
+    keyword = html.escape(keyword_raw)
+    market = html.escape(rec.get("market_label", market_raw))
+    horizon = html.escape(rec.get("horizon_label", horizon_raw))
     direction = html.escape(DIRECTION_LABELS.get(rec.get("direction"), rec.get("direction", "")))
     reason = html.escape(rec.get("reason", ""))
     outcome = html.escape(OUTCOME_LABELS.get(rec.get("outcome", ""), rec.get("outcome", "")))
@@ -247,8 +252,16 @@ def render_prediction_row(rec: dict, asset_prefix: str = "") -> str:
     target_date = html.escape(rec.get("target_date", ""))
     change = rec.get("actual_change_pct")
     change_str = html.escape(f"{change:+.2f}%" if change is not None else "-")
+
+    row_attrs = (
+        f'data-keyword="{html.escape(keyword_raw, quote=True)}" '
+        f'data-market="{html.escape(market_raw, quote=True)}" '
+        f'data-horizon="{html.escape(horizon_raw, quote=True)}" '
+        f'data-date="{html.escape(date_raw, quote=True)}"'
+    )
+
     return f"""
-    <tr>
+    <tr {row_attrs}>
       <td>{predicted_at}</td>
       <td><a href="{asset_prefix}keywords/{keyword_slug}.html">{keyword}</a></td>
       <td>{market}</td>
@@ -262,10 +275,15 @@ def render_prediction_row(rec: dict, asset_prefix: str = "") -> str:
 
 def render_consensus_row(rec: dict, asset_prefix: str = "") -> str:
     """複数モデルの多数決による予測1件を表示する行(votes/reasonsは辞書)"""
-    keyword_slug = html.escape(slugify(rec.get("keyword", "")), quote=True)
-    keyword = html.escape(rec.get("keyword", ""))
-    market = html.escape(rec.get("market_label", rec.get("market", "")))
-    horizon = html.escape(rec.get("horizon_label", rec.get("horizon", "")))
+    keyword_raw = rec.get("keyword", "")
+    market_raw = rec.get("market", "")
+    horizon_raw = rec.get("horizon", "")
+    date_raw = rec.get("predicted_at", "")[:10]
+
+    keyword_slug = html.escape(slugify(keyword_raw), quote=True)
+    keyword = html.escape(keyword_raw)
+    market = html.escape(rec.get("market_label", market_raw))
+    horizon = html.escape(rec.get("horizon_label", horizon_raw))
     direction = html.escape(DIRECTION_LABELS.get(rec.get("direction"), rec.get("direction", "")))
     outcome = html.escape(OUTCOME_LABELS.get(rec.get("outcome", ""), rec.get("outcome", "")))
     predicted_at = html.escape(format_datetime(rec.get("predicted_at", "")))
@@ -283,8 +301,15 @@ def render_consensus_row(rec: dict, asset_prefix: str = "") -> str:
     )
     reason_html = f"<ul class='reason-list'>{reason_items}</ul>" if reason_items else ""
 
+    row_attrs = (
+        f'data-keyword="{html.escape(keyword_raw, quote=True)}" '
+        f'data-market="{html.escape(market_raw, quote=True)}" '
+        f'data-horizon="{html.escape(horizon_raw, quote=True)}" '
+        f'data-date="{html.escape(date_raw, quote=True)}"'
+    )
+
     return f"""
-    <tr>
+    <tr {row_attrs}>
       <td>{predicted_at}</td>
       <td><a href="{asset_prefix}keywords/{keyword_slug}.html">{keyword}</a></td>
       <td>{market}</td>
@@ -294,6 +319,108 @@ def render_consensus_row(rec: dict, asset_prefix: str = "") -> str:
       <td>{outcome}</td>
       <td>{change_str}</td>
     </tr>"""
+
+
+HORIZON_FILTER_OPTIONS = [("tomorrow", "明日"), ("1week", "1週間後"), ("1month", "1か月後")]
+MARKET_FILTER_OPTIONS = [("japan", "日本株(日経平均)"), ("us", "米国株(S&P500)")]
+
+
+def render_filter_bar(keywords: list[str], table_selector: str) -> str:
+    keyword_options = "\n".join(
+        f'<option value="{html.escape(kw, quote=True)}">{html.escape(kw)}</option>' for kw in keywords
+    )
+    market_options = "\n".join(
+        f'<option value="{value}">{html.escape(label)}</option>' for value, label in MARKET_FILTER_OPTIONS
+    )
+    horizon_options = "\n".join(
+        f'<option value="{value}">{html.escape(label)}</option>' for value, label in HORIZON_FILTER_OPTIONS
+    )
+
+    return f"""
+    <div class="filter-bar" data-table-selector="{html.escape(table_selector, quote=True)}">
+      <div class="filter-field">
+        <label for="filter-date-from">予測日時(開始)</label>
+        <input type="date" id="filter-date-from">
+      </div>
+      <div class="filter-field">
+        <label for="filter-date-to">予測日時(終了)</label>
+        <input type="date" id="filter-date-to">
+      </div>
+      <div class="filter-field">
+        <label for="filter-keyword">キーワード</label>
+        <select id="filter-keyword">
+          <option value="">すべて</option>
+          {keyword_options}
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-market">市場</label>
+        <select id="filter-market">
+          <option value="">すべて</option>
+          {market_options}
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-horizon">期間</label>
+        <select id="filter-horizon">
+          <option value="">すべて</option>
+          {horizon_options}
+        </select>
+      </div>
+      <button type="button" id="filter-reset" class="filter-reset">リセット</button>
+    </div>
+    <p id="filter-count" class="filter-count"></p>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {{
+      var bar = document.querySelector('.filter-bar');
+      if (!bar) return;
+      var table = document.querySelector(bar.getAttribute('data-table-selector'));
+      if (!table) return;
+      var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr[data-keyword]'));
+      var total = rows.length;
+      var dateFrom = document.getElementById('filter-date-from');
+      var dateTo = document.getElementById('filter-date-to');
+      var keywordSel = document.getElementById('filter-keyword');
+      var marketSel = document.getElementById('filter-market');
+      var horizonSel = document.getElementById('filter-horizon');
+      var resetBtn = document.getElementById('filter-reset');
+      var countEl = document.getElementById('filter-count');
+
+      function applyFilters() {{
+        var kw = keywordSel.value;
+        var mk = marketSel.value;
+        var hz = horizonSel.value;
+        var from = dateFrom.value;
+        var to = dateTo.value;
+        var visible = 0;
+        rows.forEach(function(row) {{
+          var d = row.getAttribute('data-date');
+          var ok = true;
+          if (kw && row.getAttribute('data-keyword') !== kw) ok = false;
+          if (ok && mk && row.getAttribute('data-market') !== mk) ok = false;
+          if (ok && hz && row.getAttribute('data-horizon') !== hz) ok = false;
+          if (ok && from && d < from) ok = false;
+          if (ok && to && d > to) ok = false;
+          row.style.display = ok ? '' : 'none';
+          if (ok) visible++;
+        }});
+        countEl.textContent = visible + '件表示中 / 全' + total + '件';
+      }}
+
+      [dateFrom, dateTo, keywordSel, marketSel, horizonSel].forEach(function(el) {{
+        el.addEventListener('change', applyFilters);
+      }});
+      resetBtn.addEventListener('click', function() {{
+        dateFrom.value = '';
+        dateTo.value = '';
+        keywordSel.value = '';
+        marketSel.value = '';
+        horizonSel.value = '';
+        applyFilters();
+      }});
+      applyFilters();
+    }});
+    </script>"""
 
 
 def build_predictions_page(log_path: Path, site_dir: Path, keyword_counts: list[tuple[str, int]]) -> None:
@@ -310,6 +437,9 @@ def build_predictions_page(log_path: Path, site_dir: Path, keyword_counts: list[
         render_accuracy_stat("米国株(S&P500)", us_stats),
     ]) + "</ul>"
 
+    filter_keywords = sorted({r.get("keyword", "") for r in records_sorted if r.get("keyword")})
+    filter_bar = render_filter_bar(filter_keywords, ".prediction-table")
+
     rows = "\n".join(render_consensus_row(r) for r in records_sorted)
     body = f"""
     <section>
@@ -319,6 +449,7 @@ def build_predictions_page(log_path: Path, site_dir: Path, keyword_counts: list[
       ^N225、米国株: S&amp;P500 ^GSPC)の値動きと比較して自動的に答え合わせしています。
       予測日時が新しい順に表示しています。</p>
       {stats_html}
+      {filter_bar}
       <div class="table-wrap">
       <table class="prediction-table">
         <thead>
@@ -392,11 +523,14 @@ def build_model_detail_pages(by_model_dir: Path, site_dir: Path, keyword_counts:
         records = load_predictions(by_model_dir / f"{slugify_model(model)}.json")
         records_sorted = sorted(records, key=lambda r: r.get("predicted_at", ""), reverse=True)
         stats_html = "<ul class='accuracy-list'>" + render_accuracy_stat("このモデル", compute_accuracy(records_sorted)) + "</ul>"
+        filter_keywords = sorted({r.get("keyword", "") for r in records_sorted if r.get("keyword")})
+        filter_bar = render_filter_bar(filter_keywords, ".prediction-table")
         rows = "\n".join(render_prediction_row(r, asset_prefix="../") for r in records_sorted)
         body = f"""
         <section>
           <h2>{html.escape(model)} の予測ログ</h2>
           {stats_html}
+          {filter_bar}
           <div class="table-wrap">
           <table class="prediction-table">
             <thead>
@@ -528,6 +662,44 @@ h2 { font-size: 1.2rem; margin: 24px 0 12px; }
   gap: 8px 20px;
   font-size: 0.9rem;
 }
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px 16px;
+  margin: 0 0 8px;
+  padding: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+.filter-field label { color: var(--muted); }
+.filter-field input, .filter-field select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: #fff;
+  color: var(--text);
+}
+.filter-reset {
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  height: fit-content;
+}
+.filter-reset:hover { border-color: var(--accent); color: var(--accent); }
+.filter-count { color: var(--muted); font-size: 0.82rem; margin: 0 0 12px; }
 .table-wrap { overflow-x: auto; }
 .prediction-table {
   width: 100%;

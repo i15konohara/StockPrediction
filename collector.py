@@ -24,7 +24,7 @@ import sys
 import time
 import urllib.parse
 from dataclasses import asdict, dataclass, field
-from datetime import datetime
+from datetime import date as date_cls, datetime, timedelta
 from pathlib import Path
 
 import feedparser
@@ -141,6 +141,63 @@ def filter_feed_entries_by_keyword(entries: list[dict], keyword: str, source_nam
     return matched
 
 
+def is_backfill_capable_source(source: dict) -> bool:
+    """過去日付を指定した検索(Googleの after:/before: 演算子)に対応しているソースか判定する。"""
+    return source.get("type") == "query" and "google" in source.get("name", "").lower()
+
+
+def build_backfill_query(keyword: str, target_date: date_cls) -> str:
+    next_day = target_date + timedelta(days=1)
+    return f"{keyword} after:{target_date.isoformat()} before:{next_day.isoformat()}"
+
+
+def fetch_query_source_for_date(source: dict, keyword: str, target_date: date_cls, max_results: int) -> list[NewsItem]:
+    try:
+        query = urllib.parse.quote(build_backfill_query(keyword, target_date))
+        url = source["url_template"].format(query=query)
+        feed = feedparser.parse(url)
+        items = []
+        for entry in feed.entries[:max_results]:
+            items.append(NewsItem(
+                keyword=keyword,
+                source=source["name"],
+                title=entry.get("title", ""),
+                url=entry.get("link", ""),
+                published=entry.get("published", ""),
+                snippet=strip_html(entry.get("summary", "")),
+            ))
+        return items
+    except Exception as exc:
+        logger.warning("バックフィル検索エラー (%s / %s / %s): %s", source.get("name"), keyword, target_date, exc)
+        return []
+
+
+def collect_for_date(keywords: list[str], sources: list[dict], target_date: date_cls) -> dict[str, list[NewsItem]]:
+    """指定した過去日のニュースを収集する(日付指定検索に対応したソースのみ使用)。"""
+    grouped: dict[str, list[NewsItem]] = {kw: [] for kw in keywords}
+    usable_sources = [s for s in sources if is_backfill_capable_source(s)]
+    skipped_names = [s["name"] for s in sources if s not in usable_sources]
+    if skipped_names:
+        logger.info("バックフィルは日付指定検索に対応していないソースをスキップします: %s", ", ".join(skipped_names))
+
+    for source in usable_sources:
+        for kw in keywords:
+            logger.info("[%s] %s を %s 時点で検索中...", source["name"], kw, target_date.isoformat())
+            grouped[kw].extend(fetch_query_source_for_date(source, kw, target_date, MAX_RESULTS_PER_SOURCE))
+            time.sleep(FETCH_INTERVAL_SECONDS)
+
+    for kw in keywords:
+        grouped[kw] = dedupe_by_url(grouped[kw])[:MAX_ARTICLES_PER_KEYWORD]
+
+    return grouped
+
+
+def date_has_existing_report(output_dir: Path, keyword: str, target_date: date_cls) -> bool:
+    safe_keyword = sanitize_filename(keyword)
+    date_str = target_date.strftime("%Y%m%d")
+    return any(output_dir.glob(f"{safe_keyword}_{date_str}_*.json"))
+
+
 def fetch_article_excerpt(url: str, max_chars: int = 500) -> str:
     try:
         resp = requests.get(url, timeout=ARTICLE_FETCH_TIMEOUT, headers={"User-Agent": USER_AGENT})
@@ -224,10 +281,13 @@ def sanitize_filename(name: str) -> str:
     return cleaned.strip().strip(".") or "keyword"
 
 
-def save_report(grouped: dict[str, list[NewsItem]], output_dir: Path) -> list[tuple[str, Path, Path]]:
+def save_report(
+    grouped: dict[str, list[NewsItem]], output_dir: Path, as_of: datetime | None = None
+) -> list[tuple[str, Path, Path]]:
     output_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    generated_at = datetime.now().isoformat(timespec="seconds")
+    moment = as_of or datetime.now()
+    timestamp = moment.strftime("%Y%m%d_%H%M%S")
+    generated_at = moment.isoformat(timespec="seconds")
     results = []
 
     for keyword, items in grouped.items():
@@ -246,7 +306,7 @@ def save_report(grouped: dict[str, list[NewsItem]], output_dir: Path) -> list[tu
                 f, ensure_ascii=False, indent=2,
             )
 
-        lines = [f"# {keyword} のニュースレポート ({datetime.now().strftime('%Y-%m-%d %H:%M')})", "", DISCLAIMER, ""]
+        lines = [f"# {keyword} のニュースレポート ({moment.strftime('%Y-%m-%d %H:%M')})", "", DISCLAIMER, ""]
         if not items:
             lines.append("(該当記事なし)")
         else:
@@ -265,6 +325,40 @@ def save_report(grouped: dict[str, list[NewsItem]], output_dir: Path) -> list[tu
     return results
 
 
+def run_backfill(
+    keywords: list[str],
+    sources: list[dict],
+    api_key: str,
+    model: str,
+    output_dir: Path,
+    start_date: date_cls,
+    end_date: date_cls,
+) -> None:
+    """過去の日付範囲について、まだ収集していないキーワードだけニュースを遡って収集する。
+
+    日付指定検索に対応していないため Google News のみを使用する(sources.json の
+    Bing/NHK/Yahoo!等は対象外)。既に output/ にその日・そのキーワードのレポートが
+    存在する場合はスキップする。
+    """
+    current = start_date
+    while current <= end_date:
+        pending = [kw for kw in keywords if not date_has_existing_report(output_dir, kw, current)]
+        if not pending:
+            logger.info("[%s] 全キーワードが収集済みのためスキップします。", current.isoformat())
+            current += timedelta(days=1)
+            continue
+
+        logger.info("=== [%s] バックフィル収集(対象キーワード: %s) ===", current.isoformat(), ", ".join(pending))
+        grouped = collect_for_date(pending, sources, current)
+        summarize_all(grouped, api_key, model)
+        as_of = datetime(current.year, current.month, current.day, 12, 0, 0)
+        results = save_report(grouped, output_dir, as_of=as_of)
+        for keyword, json_path, md_path in results:
+            logger.info("[%s / %s] %d件 -> %s", current.isoformat(), keyword, len(grouped[keyword]), json_path)
+
+        current += timedelta(days=1)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="OpenRouter無料LLMを使ったニュース自動収集・要約")
     base = Path(__file__).parent
@@ -272,6 +366,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sources-file", type=str, default=str(base / "sources.json"))
     parser.add_argument("--output-dir", type=str, default=str(base / "output"))
     parser.add_argument("--model", type=str, default=None)
+    parser.add_argument("--backfill-start", type=str, default=None,
+                         help="YYYY-MM-DD形式。指定すると過去日付のニュースをGoogle Newsのみで遡って収集する(通常収集は行わない)")
+    parser.add_argument("--backfill-end", type=str, default=None,
+                         help="YYYY-MM-DD形式。省略時は --backfill-start と同じ日(1日分のみ)")
     return parser.parse_args()
 
 
@@ -293,6 +391,18 @@ def main() -> int:
 
     logger.info("対象キーワード: %s", ", ".join(keywords))
     logger.info("使用モデル: %s", model)
+
+    if args.backfill_start:
+        start_date = datetime.strptime(args.backfill_start, "%Y-%m-%d").date()
+        end_date = (
+            datetime.strptime(args.backfill_end, "%Y-%m-%d").date() if args.backfill_end else start_date
+        )
+        if end_date < start_date:
+            logger.error("--backfill-end は --backfill-start 以降の日付を指定してください。")
+            return 1
+        logger.info("バックフィルモード: %s 〜 %s (Google Newsのみ)", start_date.isoformat(), end_date.isoformat())
+        run_backfill(keywords, sources, api_key, model, Path(args.output_dir), start_date, end_date)
+        return 0
 
     grouped = collect(keywords, sources)
     summarize_all(grouped, api_key, model)
