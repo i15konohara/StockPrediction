@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://example.com/index.html</loc></url>
   <url><loc>https://example.com/predictions.html</loc></url>
+  <url><loc>https://example.com/calendar.html</loc></url>
   <url><loc>https://example.com/models.html</loc></url>
   <url><loc>https://example.com/keywords/イラン情勢.html</loc></url>
   <url><loc>https://example.com/keywords/トランプ.html</loc></url>

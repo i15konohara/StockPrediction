@@ -15,10 +15,11 @@
 <div class="ad-slot"><!-- 広告コード(Google AdSense等)をここに貼り付け --></div>
 <nav class="keyword-nav"><a href="index.html">トップ</a>
 <a href="predictions.html">株価予測ログ</a>
+<a href="calendar.html">暦注予測(実験)</a>
 <a href="models.html">モデル別精度</a>
-<a href="keywords/トランプ.html">トランプ (88)</a>
-<a href="keywords/高市早苗.html">高市早苗 (83)</a>
-<a href="keywords/イラン情勢.html">イラン情勢 (74)</a></nav>
+<a href="keywords/トランプ.html">トランプ (104)</a>
+<a href="keywords/高市早苗.html">高市早苗 (98)</a>
+<a href="keywords/イラン情勢.html">イラン情勢 (82)</a></nav>
 <main>
 
     <section>
@@ -27,7 +28,7 @@
       多数決で最終判定した結果です。予測対象日を過ぎたものは、実際の指数(日本株: 日経平均
       ^N225、米国株: S&amp;P500 ^GSPC)の値動きと比較して自動的に答え合わせしています。
       予測日時が新しい順に表示しています。</p>
-      <ul class='accuracy-list'><li>総合: 的中率 58.6%(68/116件)</li><li>日本株(日経平均): 的中率 63.8%(37/58件)</li><li>米国株(S&amp;P500): 的中率 53.4%(31/58件)</li></ul>
+      <ul class='accuracy-list'><li>総合: 的中率 52.5%(95/181件)</li><li>日本株(日経平均): 的中率 51.1%(47/92件)</li><li>米国株(S&amp;P500): 的中率 53.9%(48/89件)</li></ul>
       
     <div class="filter-bar" data-table-selector=".prediction-table">
       <div class="filter-field">
@@ -128,6 +129,402 @@
         </thead>
         <tbody>
         
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-20</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> イラン情勢の再悪化、ホルムズ海峡リスク、原油高が燃料・原材料費を上振れさせ、日本株のリスク選好を後退させる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 原油価格の高騰とイラン情勢の緊張が続くため、投資家のリスク回避傾向が強まり、既存の下落傾向が続くと予測される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> Trump&#x27;s imminent &quot;major decision&quot; on large-scale Iran attack reopening, surge in oil prices to 5-month highs, and Sharp&#x27;s earnings downgrade due to Iran situation and yen depreciation heighten geopolitical and corporate risk, likely weighing on market sentiment.</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-26</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> G7の備蓄放出期待はあるが、米・イスラエルの攻撃再開論やイランの協議拒否でエネルギー供給不安が続き、日経平均の上値を制約する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 地政学的リスクが解消せず、原油価格と円安の悪影響が継続する中、株価はマイナスの動きが続くと考えられる。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> Persistent tensions in Hormuz and Red Sea, G7&#x27;s delayed oil reserve release plans, and the continued -1.74% weekly decline in Nikkei reflect sustained risk-off sentiment from unresolved Iran tensions.</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 円安と中東紛争による輸入コスト増が企業業績を下押ししやすく、直近1か月で日経平均が下落傾向にあるため、リスクオフ継続の可能性が高い。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 紛争の長期化に伴う不確実性が解消されず、エネルギーコストの高騰が構造的な下支えを失う恐れがあり、下落が予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> Month-long -1.82% Nikkei decline, prolonged Middle East instability, and ongoing corporate earnings/adjustment impacts from oil/yen volatility dominate despite diplomatic activity.</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-20</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米軍施設の損傷や弾薬枯渇報告、イランの協議拒否、大規模攻撃再開の選択肢により、地政学リスクと原油高を嫌気する材料。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 原油価格の急騰と地政学的緊張が投資環境を悪化させ、米国株式市場の続落を招くと判断される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> Oil price spike and Middle East escalation combine with gasoline price pressure on Trump&#x27;s approval rating, creating uncertainty that favors a negative market reaction ahead of midterms.</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-26</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 原油高騰は米ガソリン価格やインフレ懸念を再燃させ、金利低下期待を弱める一方、G7の石油備蓄放出は緩和材にとどまる見込み。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> エネルギー価格の高騰と経済不確実性が続くため、米国株市場全体への悪影響が予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> Similar regional escalation risks, S&amp;P 500&#x27;s -0.31% weekly decline, and internal GOP divisions over Iran response add policy uncertainty, keeping pressure on stocks.</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米イラン衝突の長期化は米国株にとって成長不確実性とインフレ圧力を高めるため、S&amp;P500は下落方向になりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 長期的に見てもエネルギー価格の高騰と地政学的不安定さが市場のリスク許容度を下げ、株価は下落傾向が続く。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> -0.97% S&amp;P 500 monthly decline, persistent oil supply concerns, and the market digesting geopolitical risk without a clear near-term de-escalation path.</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-20</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経は1日で小幅反発したが、米中接近・習氏厚遇と台湾問題の不確実性が、高市－トランプ会談の安心材料を上回る可能性がある。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 直近の下落傾向が続き、トランプ大統領との会談調整が進んでいるものの、地政学的リスクや経済不安定さが残るため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 高市首相のトランプ会談調整と台湾問題での譲歩拒否が、過度な米中接近リスクを低減させ、日本企業の経営環境に一定の安定感をもたらしたことと、日経平均が小幅高となったことから、買い観測が優勢となった。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-26</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間は-1.74%で弱く、米中接近への警戒、台湾・エネルギー情勢、関税不確実性がリスク選好を抑制する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 会談の影響がまだ顕在化しておらず、継続的な下落傾向が予想されるため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 中間選挙での現金給付公約の財源不透明感やトランプ政策の不確実性、エネルギー価格の高騰がリスクオフを誘い、1週間以内にも売り圧力が継続するとの見方が強まる。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1か月も-1.82%で、米中接近、同盟国との摩擦、中東・ウクライナに伴うエネルギー価格高騰が日本株に逆風。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 長期的には米中関係の緊張や国内政治の混乱が続くため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1か月間の下落トレンドが続き、財政政策の不透明性と地政学的リスクが市場心理を継続的に圧迫し、さらなる下値リスクが残るとの評価。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-20</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;Pは1日でほぼ横ばいだが、習氏への異例の厚遇により米中緊張緩和期待が短期的なリスクオン材料になる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 経済指標の弱さや政治的分断、トランプ氏の政策（金利要求、AI規制一蹴）が市場を押し下げる要因</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> トランプ氏の現金給付公約による財源懸念とエネルギー価格の上昇が、S&amp;P500のリスク許容度をわずかに圧迫し、指数は横ばいだが下値固めの動きが続く。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-26</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間は小幅下落で、米中接近期待があっても、5000ドル支給構想、関税、FRB圧力、エネルギー不安が上材料を相殺する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 貿易摩擦や中間選挙の結果に起因する不確実性が残り、株価が下落する可能性が高い</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間の下落トレンドに加え、中間選挙政策の不透明性と地政学的リスクが継続的に重しとなり、さらなる調整が予想される。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1か月は-0.97%で、財政悪化懸念、貿易摩擦、金利・エネルギー不安、政治問題が市場心理を重くする。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> インフレ抑制と金利上昇の期待、米国経済の成長鈍化が続くため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1か月間の下落トレンドが続き、財政・通貨政策の不確実性とグローバルな地政学的リスクが市場センチメントを圧迫し、底値圏でのもみ合いが続く可能性がある。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-20</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1日は小幅反発したが、高値で終値が下がっており、積極財政・国債増発への財政規律懸念と政治リスクが上値を制約する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 支持率が60%を超え維持されており、内閣改造による組織の安定化と「積極財政」という明確な方針が政治的安定を支えるため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 裏金議員の副大臣・政務官起用と72億円の政府PR動画批判が、ガバナンスと財政健全性への懸念を高め、株価に下押し圧力をかける可能性があるため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-26</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間で-1.74%と軟調で、改造内閣の継続性重視、裏金議員起用、財政拡張への警戒感が弱材料となる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 新しい閣僚による統合と政策の方向性が明確化され、市場の不確実性が解消される可能性がある</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 過去1週間のニュースでは、林芳正前総務相の退任や裏金問題、財政政策の方向性への疑問が続き、日経平均は1.74％下落。これらの政治的不確実性と財政懸念が、来週も市場の重荷となる見込み。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1か月で-1.82%と下落基調にあり、長期金利上昇や巨額債務への市場警戒感が日本株全体を重くする。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 高い支持率と継続的な政策姿勢が長期的な信頼を築き、株価を押し上げる要因となる</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 過去1か月間のニュースでは、財政拡大への懸念や政治資金問題が繰り返され、日経平均は1.82％下落。これらのテーマが1か月間持続する中、市場の下落トレンドは継続すると予測される。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-20</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米国株への直接影響は限定的だが、日本株の弱さや日本の財政懸念による円・金利上昇リスクが全球リスク選好を下げる方向。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 財政規律への懸念と「血税」批判が反映されており、市場のリスク回避が強まっているため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 日本の政治的不確実性と財政懸念が、リスクオフの動きを誘発し、米国市場にもわずかな下押し圧力をかける可能性があるため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-26</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は1週間で-0.31%の軟調推移で、日本政治・財政リスクが海外市場の慎重材料となる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国市場は債務リスクと金利上昇懸念により弱気であり、国内の財政政策論争が全球的な不満に波及しているため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 過去1週間の日経平均の下落と同様に、米国市場でもリスク回避の姿勢が強まり、S&amp;P500は0.31％下落。日本の政治状況が世界的なリスク感情に影響を与えている可能性がある。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-19">
+      <td>2026-09-19 03:35</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は1か月で-0.97%と低下基調にあり、日本の積極財政が世界金利上昇圧力として米国株にも重しとなる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国経済の構造的な課題が解消されず、財政政策の対立が継続する限り、株価は下落傾向が続くと予測される</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 過去1か月間のS&amp;P500の下落トレンドに加え、日本の政治的リスクが世界的な市場心理に寄与している可能性があり、来月も慎重な姿勢が続くと予測される。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> イランの協議拒否姿勢と原油価格の高止まりにより、輸入コスト増・リスク回避志向が強まり、日経平均は前日反発後も下落圧力を受ける見込み。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 原油価格の高騰とガソリン価格の上昇が継続し、企業の利益率悪化と投資家の懐疑感が強まるため、株価は下落圧力を受け続ける。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> イラン高官の海峡情勢変更発言や米イラン攻撃の応酬拡大がリスクオフを誘い、石油供給途絶懸念が日経平均の重しとなる一方、直近1日の0.33%上昇は材料の消化と見られ、明日は売り優位になりやすい</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-25</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> ホルムズ海峡緊張、紅海情勢、韓国派兵苦悩などが続き、エネルギー価格高騰が日本企業業績に悪影響を与える可能性が高い。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> エネルギー危機と地政学的リスクが続行され、市場の不確実性が解消されないため、下落基調が維持される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間を通じたイラン・中東緊張の継続と原油価格の5月以来の高水準が続き、G7の備蓄放出策も限定的で、日本株は売り圧力が継続し-1.74%の下落トレンドが維持される見込み</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-18</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 中東情勢の長期化と原油・燃料費上昇が続けば、円安・原材料高による収益悪化やリスク選好後退が日本株全体を重くする。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 根本的な構造的課題（エネルギーコスト、経済成長の鈍化）が解消されず、市場の不確実性が続くため、株価は下落基調が維持される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1ヶ月間で-1.82%の下落となり、地政学的リスクとエネルギーコスト上昇が日本経済の下押し要因として定着しており、さらなる売りが予想される</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="tomorrow" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米イラン攻撃の応酬激化と原油高が物価不安・リスク回避を招き、S&amp;P500は小幅ながら下落方向になりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国株は能源価格高騰とガソリン価格の影響、さらに中間選挙の前景による政治的リスクが重なり、下落圧力が続き下落が予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 中東緊張と原油市場の変動がリスクセンチメントを押し下げ、S&amp;P500は直近1日の-0.03%小幅下落にとどまったが、明日は地政学的リスクが材料視され売りが優先されやすい</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-25</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> ガソリン高騰、共和党内の不協和音、ホルムズ海峡への派兵圧力などが市場心理を悪化させ、原油供給不安も重荷となる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国市場は能源危機と地政学的緊張が続く中、金利上昇期待や経済データの悪化が継続し、下落基調が続く見込み。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間を通じた地政学的リスクの高まりと共和党内の対応揺れが続き、S&amp;P500は-0.28%の下落トレンドが維持され、方向感のない慎重な展開が続く</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-18</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> イラン情勢の長期化によるエネルギー価格上昇とインフレ再懸念、中間選挙前の政策不確実性が米国株全体の上値を抑える可能性が高い。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 地政学的リスクとインフレへの懸念が根強く、米国経済の回復力が弱まるため、長期的には下落トレンドが続く。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1ヶ月間で-0.94%の下落となり、イラン情勢の不確実性と原油価格の変動が米株全体の重しとなり、下値トレンドが継続する見込み</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="tomorrow" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経は前日小幅反発したが、日銀の迅速な利上げ、エネルギー価格高騰、米中接近に伴う台湾・同盟不安が上値を制約する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 日本株は直近で下落傾向が続いており、トランプ氏の金利1%以下という要求や5000ドル現金給付の財政破綻懸念、地政学的リスクが市場を押し下げているため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> トランプ氏のFRB利下げ圧力が円高を誘い、ボジハの利上げ継続と相まって輸出企業の利益見通しを圧迫し、日経平均に重荷となるため</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-25</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間で-1.74%と軟調で、関税・貿易摩擦や日米同盟への警戒、海外リスク回避が継続しやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 1週間後も同様の弱気は続き、$5000公約の不確実性と国際情勢の不安定さが株価上昇を妨げているため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 米中間選挙の5000ドル現金給付公約や対中政策、地政学的緊張が続き、日本株のリスクオフセンチメントが続いたため</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-18</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1か月で-1.82%と下降基調。日銀引き締め、米政策の不透明感、中東・ウクライナエネルギー懸念が投資家心理を重くする。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 長期的には財政赤字拡大とインフレ懸念が市場に悪影響を及ぼし、株価は下落傾向が続くと予想されるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 月間を通じたトランプの財政政策懸念、米中対立、国内政治不安が継続的に日経平均の下落圧力となったため</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="tomorrow" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;Pは前日ほぼ横ばいだが、トランプ氏のFRB圧力とウォーシュ議長のインフレ懸念で金利上昇・政策不透明感が懸念される。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国株は直近で微弱な下落を見せており、FRBの利下げ要求に対する期待と中東・ウクライナ等の地政学的不安定さが上昇を抑えているため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> トランプ氏のFRB急速利下げ要求が市場の利下げ期待を高め、一時的なリスク資産の買い支えとなりS&amp;P500を支抜くと判断するため</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-25</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間で-0.28%、1か月で-0.94%と小幅下落基調。関税、財政出動懸念、中東エネルギー不安が上値を抑制する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 1週間後も不確実性が残るため、市場は慎重な動きを見せ、下落傾向が継続する可能性が高い。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 5000ドル支給構想の財源不透明さや対中競争の激化、政治的分断が市場の不確実性を高め、S&amp;P500に売り圧力をかけたため</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/トランプ.html">トランプ</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-18</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 迅速利下げ要求とFRB独立性への懸念、5000ドル支給構想の財源不安、保護主義・地政学リスクが中期のリスクプレミアムを上げる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 長期的には金利上昇のリスクと財政問題が残り、米国株は下落圧力が続くと判断されるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 月間を通じた公約の財源懸念、米中戦略競争の激化、政治的混乱がS&amp;P500の下落トレンドを形成したため</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="tomorrow" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📈 ポジティブ<br><span class="card-meta">👍2 / 👎1(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 第2次改造内閣発足で主要閣僚留任と高支持率が安心材料となり、積極財政・食料品消費税減税が短期のリスク選好を後押しする。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 財政規律への懸念や巨額債務リスク、広報費増大、閣僚人事の論点などが挙げられており、市場の不安要素が強まっているため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 食料品消費税減税と給付付き税額控除の創設など、景気刺激策が好感され、政権の継続性が市場の不確実性を低減させたため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-25</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 週間は下落基調で、国債40兆円・財政規律への懸念、政治資金問題や広報費批判がリスク選好を制約しやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 政治的混乱と財政問題が継続することで、投資家の信頼が低下し、下落傾向が予想されるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 裏金議員の起用や財政規律への懸念が再燃し、市場のリスク回避ムードが強まったため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>日本株(日経平均)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-18</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1か月も日経平均は下落しており、長期金利上昇や巨額債務への警戒が政策継続のプラス材料を上回る可能性がある。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 財政問題の解決が遅れ、市場の不信感が増す可能性があるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 長期的な国債増大と財政リスクが意識され、1か月かけて売り圧力が継続したため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="tomorrow" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は直近小幅下落で、日本発の財政・ガバナンス懸念が全球のリスク選好をわずかに重くする。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 日本市場の財政リスクと政治的混乱が世界市場にも波及し、米国株も下落圧力を受ける可能性があるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 日本の政策継続が好感され、リスク選好的なムードが米国市場にわずかに波及したため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1週間後<br><span class="card-meta">対象日: 2026-09-25</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は1週間で小幅下落しており、日本を含む先進国の財政懸念が上値を制約する。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 日本国内の不祥事や財政問題が周辺国にも影響を与え、米国株も停滞または下落傾向が予想されるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 日本政治の不確実性がリスクオフの流れを誘発し、米国市場に小幅な下落圧力をかけたため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-18">
+      <td>2026-09-18 03:22</td>
+      <td><a href="keywords/高市早苗.html">高市早苗</a></td>
+      <td>米国株(S&amp;P500)</td>
+      <td>1か月後<br><span class="card-meta">対象日: 2026-10-18</span></td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は1か月で下落基調で、金利上昇警戒と財政悪化懸念を背景に弱手となりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 日本の財政問題が長期化し、米国経済への悪影響が拡大する可能性があるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 米国市場独自の要因で1か月間の下落トレンドが継続し、日本政策の影響は限定的だったため。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="tomorrow" data-date="2026-09-17">
       <td>2026-09-17 03:24</td>
       <td><a href="keywords/イラン情勢.html">イラン情勢</a></td>
@@ -135,8 +532,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 原油高・海運不安・リスク回避の流れが続き、輸入コスト上昇懸念から日本株全体には重し。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 直近1日で日本株はわずかに下落し、伊朗情勢の緊張と原油高が市場の警戒を強めているため、明日も下落傾向が続くと予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> イラン高官が海峡情勢変更と表明し、米協調を拒否。トランプ氏のホルムズ海峡派兵要請とイランの「深刻な結果」圧力が継続。原油価格は5月以来の高水準でリスクオフが優勢。1日足は横這いだが、緊張悪化材料が重しとなりネガティブ寄り。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.03%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-17">
@@ -168,8 +565,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 地政学リスクと原油高によるインフレ・金利上昇懸念から、米株全体ではリスク回避の流れが強まりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> S&amp;P500は今日-0.45%下落しており、中東の紛争による原油価格高騰と政治的リスクが市場を押し下げているため、明日もネガティブな動きが予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 同様にイラン・米緊張と原油高がリスク回避を促す。S&amp;Pは1日で-0.45%と小幅下落。協調会合やBRICSの自制要請は限定的で、全体としてネガティブ寄り。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.10%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-17">
@@ -201,8 +598,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 政権の骨格維持や高支持率は支えるが、国債40兆円発言、長期金利上昇懸念、財政膨張への警戒が直近材料として強く、日経平均は1週間で下落している。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 支持率は60%台を維持しているものの、政府の積極財政と国債40兆円発言が金融リスクを招き、市場の不安定化が続いているため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> ニュースの財政懸念と党役員人事の不確実性が材料視され、日経平均がほぼ横ばい(-0.01%)となったため。支持率は高いが、国債40兆円発言や広報費増などが重しになり慎重な姿勢が続いた。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.03%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-17">
@@ -234,8 +631,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米国市場への直接影響は限定的だが、日本の財政・長期金利懸念と東アジアリスクが世界リスク選好を下げやすく、S&amp;P500は直近1日で下落している。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国市場もインフレ抑制策と成長投資の不確実性から弱気であり、全球的なリスク回避が続く</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> S&amp;P500が-0.45％と小幅下落、日本の政策不確実性と世界的なリスクオフ感覚が米市場にも波及し、慎重な取引が続いたため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.10%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-17">
@@ -267,8 +664,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 継続的な経済停滞、貿易摩擦、高油価格、国内政治スキャンダルが市場を押し下げ、短期的な上昇要因が見られないため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 直近1日の日経平均は-0.01%と横這いだが、ニュース要約でトランプ氏がロシア燃料施設攻撃停止を要求しゼレンスキー氏を軽油高騰の原因と非難したことで原油高懸念が浮上。日本の石油輸入依存と相まってリスクオフが進み、1週間-2.74%、1か月-8.29%の下落トレンドが重しとなり日経平均に下押し圧力がかかる。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.03%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-17">
@@ -300,8 +697,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 高油価格、米中緊張、トランプ政権の対立政策が市場のリスク感性を高め、株価が下落する可能性が高い。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> トランプ氏の中東石油発言と司法機関との対立がS&amp;P500の-0.45%下落トレンドを継続させ、エネルギー関連リスクと政策不確実性が重しとなり、上値が限定的となる。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.10%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-17">
@@ -366,8 +763,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は1日・1週間とも下落しており、ロシア関連の燃料施設攻撃報道や軽油高騰がインフレ懸念とリスク回避を強めるため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.10%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-17">
@@ -399,8 +796,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 中東情勢の緊迫化と原油高により、リスク回避志向と輸入コスト増が広がしやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 紅海でのイラン攻撃が拡大し原油価格が上昇、輸出依存度の高い日本経済へのリスクが強まる</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 中東緊張高まり・原油5月来高水準で輸入コスト上昇、リスクオフで売り優勢</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.03%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-16">
@@ -432,8 +829,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 中東情勢の悪化により、リスクオフと原油高を通じて株式全体が下押しされやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 原油価格が5月以来の高水準に達し、エネルギー株が好調となり、米国株式市場全体に上昇圧力が出る</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> イラン攻防激化・原油高でインフレ懸念再燃、リスク回避的な売りが優勢</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.14%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-16">
@@ -465,8 +862,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> ホルムズ海峡をめぐる地政学リスクと原油高懸念が日本市場全体を重くし、米国株のAI材料のプラス効果は限定的と判断。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> トランプ氏のAI規制反対とAI規制強化への批判が市場の不確実性を高め、日本株にも負の影響を与える。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> ホルムズ海峡費用負担要求とロシア関連資金提供報道が地政学的リスクを高め、日本の輸出と安全保障費に不確実性</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.03%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-16">
@@ -498,8 +895,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> AI規制強化への反対はAI・半導体・クラウド株の収益期待を押し上げ、短期的な市場心理を改善させる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> AI規制緩和の姿勢が米国テック株のリスクを増大させ、投資家の懐疑が拡大し株価下落圧力が強まる。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 自身の指名判事批判とロシア資金提供疑惑、AI規制否定が政治的安定感を低下させ市場に不確実性</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.14%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-16">
@@ -531,8 +928,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍3 / 👎0(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 高内閣の支持率が高く、政策継続への信頼感が市場安心材料となる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 高市首相の支持率が60%超で安定しており、円安・物価高の逆風にも耐えているため、投資家の信頼感が高まり株価が上昇傾向になる。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 支持率６１％台の維持が市場のリスク許容度を高め、内閣の安定感が買い材料となる</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>+1.03%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-16">
@@ -564,8 +961,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍3 / 👎0(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日本の政治安定はアジア全体のリスク選好をわずかに押し上げ、米国市場にも小幅にプラス。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 日本の政治的安定と支持率向上はグローバルリスクオフのシグナルとなり、米国株式市場にも好影響を与える。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 日本の政治的安定が円相場とリスク感情に好影響を与え、米市場への波及効果が限定的ながらプラス</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>+1.14%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-16">
@@ -597,8 +994,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-16</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 紅海海峡・イラン情勢の緊迫で原油・物流リスクが再燃し、輸入コスト増とリスク回避が優勢になりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> イランと石油確保の交渉が進む一方、紅海制圧や米伊対立が継続するためリスク感応が強まり、株価が下落する傾向。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> BRICS首脳の「最大限の自制」宣言が地政学的リスクプレミアムを低減させ、トランプ氏のベネズエラ型石油協調発言が供給懸念を和らげる可能性があり、紅海のフーシ制圧リスクは限定的との市場感からポジティブ志向。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.69%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-15">
@@ -663,8 +1060,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-16</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> ウクライナ・イラン情勢の缓和期待でリスクオンとなりやすく、原油安は輸入依存度の高い日本市場にプラス。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 新たな関税措置が半導体・太陽光パネルの材料に影響し、関連企業の収益が圧迫されるため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> トランプ関税の影響で日本の自動車輸出が失速するとの報道が伝わると、輸出主導の銘柄を中心に売りが先行。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.69%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-15">
@@ -729,8 +1126,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-16</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍1 / 👎2(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日中関係の緊張緩和観測、内閣安定化、沖縄新知事との連携期待が短期のリスク選好を後押し</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 国債40兆円発言が財政リスクを高め、市場の不安を招くため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 首相の国債40兆円発言が政府与党の懸念を招き、軌道修正が検討されていることで短期的な財政不安が市場に浮上したため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.69%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-15">
@@ -1202,8 +1599,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米・イスラエルとイランの報復合戦が長期化し、原油価格・金利上昇が見込まれるため、日本株全体には業績悪化懸念とリスク回避材料が残る。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 原油価格の上昇と市場の警戒が継続しており、下落基調が続き、米国株も弱気であるため両国ともマイナス傾向が予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 継続する中東緊張と原油高が日本株の下押し材料となり、BRICSや外交動きによる緩和効果は限定的で、1週間後の株価は下落基調が続くと予想されるため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-12">
@@ -1235,8 +1632,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間は下落基調で、ホルムズ情勢の悪化がエネルギー価格と金利を押し上げ、成長株中心の米国株全体には逆風となる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 原油価格の高騰と地政学的緊張が継続し、米国株は下落基調が維持される見通しである。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 週を通じての中東緊張の拡大と原油高が米国株のリスクセンチメントを圧迫し、全体として下落トレンドが定着すると予想されるため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-12">
@@ -1268,8 +1665,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 支持率維持や政権骨格の継続は底堅さ要因だが、財政健全性への疑念、広報費問題、閣改造をめぐる不確実性が上振れ材料を上回る</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 広報費の問題が継続し、財政リスクと物価上昇懸念が残るため、市場は引き続き下落圧力を受ける</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 週間を通じて政治的な混乱と政策への懸念が続き、株価下落トレンドが継続しているため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-12">
@@ -1301,8 +1698,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍2 / 👎1(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日本発の財政懸念による円・長期金利上昇やリスク回避が全球株に軽微な重しとなり、米市場も直近1週間の下落傾向を続けやすい</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 日本の不祥事が一時的なリスクを生むが、米国経済の回復期待が保たれ、S&amp;P500 は前週比微増を維持</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 週間動向もプラス圏に近く、日本の国内政治が米国株のトレンドを大きく変える材料となっていないため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-12">
@@ -1334,8 +1731,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 直近1週間で日本株は下落し、継続的な経済的課題と地政学的リスクが下落を加速させるため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間で-1.55％の下落となり、選挙公約と対外圧力が市場に売り圧力をかけ続けているため、下落トレンドが維持される。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-12">
@@ -1367,8 +1764,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 直近1週間で米国株は下落傾向が続き、FRBの利下げ要求や貿易摩擦などが下落を支えるため</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間で-1.17％の小幅下落、週明けの楽観論が薄れ、追加関税や財政懸念が再び重しとなり、下落トレンドが戻る。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-12">
@@ -1389,8 +1786,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-13</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経平均は1日・1週間・1か月とも下落基調で、安値近辺。中東リスクによる原油高や保護主義的関税は日本株に圧迫材料。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.81%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-12">
@@ -1400,8 +1797,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 短期的な反発があっても、1週間・1か月とも下落傾向。中間選挙向けの大型給付公約による財政負担懸念や対外摩擦が上値を抑える。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-12">
@@ -1422,8 +1819,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-13</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 前日が+0.86%と反発しており、フーシ派への直接攻撃見送りにより中東リスクが一時的に軽減。다만財政負担・関税懸念は上値制限材料。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-0.48%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-12">
@@ -1433,8 +1830,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-19</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間で-1.17%と弱く、成人への5000ドル支給公約による財政悪化懸念、FRB利下げ要求、関税・中東リスクが市場を重くする。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-12">
@@ -1466,8 +1863,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 沖縄知事選の当選や積極財政は下支え材料だが、1週間で下落基調であり、人事・派閥・財政健全性をめぐる論点が強く、回復は慎重になりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 中道分裂と失点の少なさから支持率が『お化け数字』とされ、麻生氏の影や林大臣の総裁選問題が引き続きリスク要因となり、週単位で下落傾向が続く可能性がある</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 内閣改造と派閥人事の不確実性が続き、財政・経済政策への懸念が直近1週間の日経平均 -1.55%下落を支え、リスクセンチメントは慎重な水準が続く。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-11">
@@ -1499,8 +1896,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米国指数は1週間で下落基調で、日本の政治・財政不確実性がアジア全体のリスク選好を弱める可能性があり、材料不足なら調整方向になりやすい。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米国市場は依然として弱気で、財政赤字と金利上昇の懸念が続き、政治的な不確実性が拡大する中、週次で追加の下落が予想される</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 直近1週間のS&amp;P500 -1.17%下落に加え、日本の政治不確実性がリスク回避の一因となり、米国市場も慎重な動きが続くと見込む。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-11">
@@ -1532,8 +1929,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 中東情勢の緊張が続く中で原油価格の不安定化と軍事的リスクが残り、市場は引き続き下落圧力を受ける。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-11">
@@ -1565,8 +1962,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 週次トレンドは-1.17%の下落であり、緊張が解消しない限り株価は下落方向に推移する。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-11">
@@ -1598,8 +1995,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 中間選挙後の政策発表と継続する経済・外交リスクが市場に悪影響を及ぼし、株価は引き続き下落または横ばいとなる見込み。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 週間騰落率-1.55%で下落継続。共和党大会の動向と政策不確実性が市場のリスクオフを誘引。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-11">
@@ -1631,8 +2028,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 中間選挙前後の政治的揺らぎと経済リスクが継続し、米国株（S&amp;P500）は微弱上昇でも全体的な下落圧力が残り、ネガティブな方向と判断。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 週間-1.17%の小幅下落。政策詳細と地政学的リスクが意識され、上げ幅が限定的となりネガティブ傾向。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-11">
@@ -1664,8 +2061,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米イラン応酬の長期化と海運・原油供給不安が継続し、日経平均はすでに1か月で大きく下落しており、慎重観測が続きやすい。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間で日経平均が1.55%下落。イランと米国の応酬が続き、ホルムズ海峡周辺の攻撃が拡大、原油高・株価下落の懸念が継続し、リスク回避の売りが優勢となったため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-11">
@@ -1697,8 +2094,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米イラン対立の長期化と原油高は、米株全体には企業コスト増・金利高懸念・リスク回避を招きやすい。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 1週間でS&amp;P500が1.17%下落。地政学的リスクが確定的様相を呈し、原油価格の高止まりと世界経済への波及懸念が再燃し、売りが再燃したため</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-11">
@@ -1730,8 +2127,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間で-1.55%と下落基調で、保護主義的関税政策や財政負担懸念がリスク選好を悪化させる見込み。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-11">
@@ -1763,8 +2160,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-18</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 中間選挙を前にしたバラマキ公約、党内批判、報復関税・対中強硬策が財政・景気懸念を高める。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.28%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-11">
@@ -2049,8 +2446,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-11</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> ホルムズ海峡周辺の船舶攻撃拡大と原油高により、エネルギー輸入依存度の高い日本市場ではリスク回避売りが強まりやすい。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-1.93%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1week" data-date="2026-09-10">
@@ -2060,8 +2457,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米・イスラエルとイランの応酬が続く中、原油供給不安や海運リスクが高まり、日本株全体には業績悪化懸念が及びやすい。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-1.74%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="japan" data-horizon="1month" data-date="2026-09-10">
@@ -2082,8 +2479,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-11</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> イラン情勢の悪化と原油高は、米国株にとってインフレ再懸念とリスク回避要因となり、短期では下落方向になりやすい。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.86%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1week" data-date="2026-09-10">
@@ -2093,8 +2490,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米軍によるイランタンカー攻撃への応酬再燃により、中東リスクと供給不安が市場に残り、S&amp;P500には警戒感が続く。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.61%</td>
     </tr>
 
     <tr data-keyword="イラン情勢" data-market="us" data-horizon="1month" data-date="2026-09-10">
@@ -2115,8 +2512,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-11</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1日は小幅上昇し、内閣改造はほぼ留任で政権骨格の安定感が強まる一方、成長投資の絞り込みがプラス材料となるため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-1.93%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-10">
@@ -2126,8 +2523,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1週間は上昇基調で、沖縄県知事選対応や閣僚留任による政策継続性がリスクを抑制するため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-1.74%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-10">
@@ -2148,8 +2545,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-11</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1日は下落し、S&amp;P500が期間安値近くだため、短期的なリスク回避ムードが続きやすいと判断するため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.86%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-10">
@@ -2159,8 +2556,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-17</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1週間は下落基調で、日本の財政懸念による世界株全体のリスク選好低下が米国株にも重なりやすいため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+0.61%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-10">
@@ -2379,8 +2776,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-10</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 沖縄県知事選で与党推薦候補が当選し、政権骨格維持と政策継続の見通しから、短期的な安心感が上回る。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>+0.20%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-09">
@@ -2390,8 +2787,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-16</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経平均は1週間で+1.27%と上昇基調で、支持率60%台や企業による経済政策評価が材料。財政懸念はあるが、短期的にはプラス寄りと判断。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-1.87%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-09">
@@ -2412,8 +2809,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-10</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は前日-0.48%で軟調で、1か月も下落基調。日本の財政・政治リスクがリスク選好をわずかに毀損する可能性がある。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.58%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-09">
@@ -2423,8 +2820,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-16</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間はS&amp;P500がほぼ横ばいながら微増で、日本株の上昇や政権安定が全球に限定プラス。ただし上昇幅は大きくならない見込み。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-1.11%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-09">
@@ -2643,8 +3040,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-09</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1日で大幅下落し、終値が安値圏となったほか、積極財政・国債増発・長期金利上昇への警戒感が上値を抑える可能性が高い。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.19%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-08">
@@ -2654,8 +3051,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-15</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 内閣改造やポスト高市の人事不透明感、政治資金・広報費などをめぐる批判が続く一方、株価も1週間で下落基調で、短期的には慎重視が続きやすい。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-2.74%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-08">
@@ -2676,8 +3073,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-09</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500も直近1日で下落しており、日本株の弱さがリスク回避感を通じて米株全体に短期的な重しとなる可能性がある。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.48%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1week" data-date="2026-09-08">
@@ -2687,8 +3084,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-15</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 米株も1週間で小幅下落基調であり、日本発の財政・政治リスクやアジア市場全体の慎重なムードが上値を抑える可能性が高い。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-1.14%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-08">
@@ -2742,7 +3139,7 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> イランによる米エネルギー資産への警告と米国の反発必至感から、リスク回避、原油高、インフレ再懸念が高まり、S&amp;P500全体には下落方向。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 今日S&amp;P500が-0.38%下落しましたが、地政学的緊張が続く中、イランの制限区域計画やサウジアラビアへの被害など新たなリスク要因が残るため、明日も下落圧力が続く可能性があります。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 直近1日のニュース要約はイラン報復警告、制限区域計画などリスク高要素のみで、S&amp;P500は-0.38％と下落。米国株は中東リスクの直接的影響を受けやすく、警戒感が売り圧力に転じると判断する。</li></ul></td>
-      <td>⏳ 判定待ち</td>
+      <td>⚠️ データなし</td>
       <td>-</td>
     </tr>
 
@@ -2808,7 +3205,7 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は直近1日で-0.38%。FRB利上げ観測の高まりにトランプ氏が反発する構図が、金利上昇と株価評価額への圧迫につながる。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 直近1日でS&amp;P500は-0.38%下落しており、FRB利上げ観測が高まりトランプ氏が「高金利を許さない」との姿勢が市場に不安を醸成しているため、下落方向が予想される。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 直近1日S&amp;P500が-0.38%下落。トランプ氏の法の抜け道追求と巨大財政支出公約が、即時の財源懸念と政治不確実性から売り圧力。FRB牽制はあるが、1日の反応はネガティブ寄り。</li></ul></td>
-      <td>⏳ 判定待ち</td>
+      <td>⚠️ データなし</td>
       <td>-</td>
     </tr>
 
@@ -2874,7 +3271,7 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎2(全2モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 米中会談の延期と政治的論争が地政学的リスクを高め、株価が下落圧力となる</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> S&amp;P500は-0.38%と下落、トランプ接触探りと中国会談控えの外交不確実性がリスクセンチメントを圧迫、ゴーカブリ報道は米市場に直結しないため</li></ul></td>
-      <td>⏳ 判定待ち</td>
+      <td>⚠️ データなし</td>
       <td>-</td>
     </tr>
 
@@ -2907,8 +3304,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1日で日経平均は+2.12%と上昇し、支持率維持・沖縄県知事選勝利・積極財政・成長投資継続の見通しが株価を支える。批判報道は世論上のリスクだが、短期的な市場影響は限定的と判断。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-1.70%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1week" data-date="2026-09-07">
@@ -2918,8 +3315,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-14</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間は小幅プラス圏で、内閣骨格の維持、与党・沖縄新政権との連携、AI・デジタルや成長投資への期待が上振れ材料。財政赤字や長期金利懸念は上昇幅を制約する。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-4.38%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="japan" data-horizon="1month" data-date="2026-09-07">
@@ -2940,7 +3337,7 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-08</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は直近1日で-0.38%と小幅下落しており、米中会談控えの高市氏のトランプ接触探りは日米協調材料である一方、外交の不確実性を増やし、短期的な慎重向きと判断。</li></ul></td>
-      <td>⏳ 判定待ち</td>
+      <td>⚠️ データなし</td>
       <td>-</td>
     </tr>
 
@@ -2951,8 +3348,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-14</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間はS&amp;P500がほぼ横這いながら小幅プラスで、高市氏の訪米・トランプ接触が日米協調の確認材料になればリスク選好を回復させ得る。ただし米中関係の不確実性は残る。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>-0.70%</td>
     </tr>
 
     <tr data-keyword="高市早苗" data-market="us" data-horizon="1month" data-date="2026-09-07">
@@ -3171,7 +3568,7 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-07</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> イラン情勢の悪化懸念、米金利上昇観測、円高・原油高による輸出株への压力が重なる</li></ul></td>
-      <td>⏳ 判定待ち</td>
+      <td>⚠️ データなし</td>
       <td>-</td>
     </tr>
 
@@ -3182,8 +3579,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-13</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 直近1週間は下落しており、トランプ氏のFRB牽制と米中・中東リスクが市場心理を弱める</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-4.38%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-06">
@@ -3204,8 +3601,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-07</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> FRB利上げ観測へのトランプ氏の反対姿勢が政策不確実性を高め、イラン警告もリスク回避を招く</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.58%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-06">
@@ -3215,8 +3612,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-13</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は横這いだが、金利上昇・中東緊張・政治的対立が上値を制約する</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-1.28%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-06">
@@ -3435,8 +3832,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-06</span></td>
       <td>📈 ポジティブ<br><span class="card-meta">👍1 / 👎0(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経平均は前日比+1.26%と反発し、直近高値付近まで回復している。中東・通商リスクはあるが、短期的には上昇方向。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>+2.12%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-05">
@@ -3446,8 +3843,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-12</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間は-2.09%と下落基調で、イラン情勢の矮小化発言、原油高懸念、カナダとの通商摩擦がリスク選好を弱める。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-1.55%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-05">
@@ -3468,7 +3865,7 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-06</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は前日-0.38%で終値が安値付近にあり、イラン戦争の矮小化発言、原油高懸念、カナダ反発が短期的な下落圧力になる。</li></ul></td>
-      <td>⏳ 判定待ち</td>
+      <td>⚠️ データなし</td>
       <td>-</td>
     </tr>
 
@@ -3479,8 +3876,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-12</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間はほぼ横ばいだが、最新ニュースの中東・通商摩擦の長期化懸念が足元の強さを相殺し、下落方向に振れやすい。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.80%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-05">
@@ -3897,8 +4294,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-04</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経は前日-0.17%で高値から回落しており、トランプ氏のFRB利下げ要求と対米赤字国への貿易停止示唆、ホルムズ海峡をめぐる緊張感が、輸出企業・エネルギーコスト面でリスク回避を招くため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.26%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1week" data-date="2026-09-03">
@@ -3908,8 +4305,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-10</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 日経は1週間で-2.90%と弱く、中間選挙向けの大型公約、関税、財政負担懸念に加え、中東リスクが上値を抑えるため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>❌ 不的中</td>
+      <td>+1.65%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="japan" data-horizon="1month" data-date="2026-09-03">
@@ -3930,8 +4327,8 @@
       <td>明日<br><span class="card-meta">対象日: 2026-09-04</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> S&amp;P500は前日+1.06%で高値圏にあるが、FRBへの圧力と赤字国との貿易停止示唆、NATO返還要求、中東緊張が市場の不確実性を高めるため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-0.38%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1week" data-date="2026-09-03">
@@ -3941,8 +4338,8 @@
       <td>1週間後<br><span class="card-meta">対象日: 2026-09-10</span></td>
       <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎1(全1モデル)</span></td>
       <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 1週間は小幅プラスでも高値圏近辺で余力は限定的で、選挙前の財政公約、追加関税、FRB独立性への懸念が売りを誘うため。</li></ul></td>
-      <td>⏳ 判定待ち</td>
-      <td>-</td>
+      <td>✅ 的中</td>
+      <td>-2.01%</td>
     </tr>
 
     <tr data-keyword="トランプ" data-market="us" data-horizon="1month" data-date="2026-09-03">

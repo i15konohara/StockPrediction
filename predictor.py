@@ -148,9 +148,14 @@ def build_context_prompt(keyword: str, period_label: str, articles: list[dict]) 
     return (
         f"以下は「{keyword}」に関する{period_label}のニュース要約の一覧です(古い順とは限りません)。\n\n"
         f"{summaries}\n\n"
-        "この期間全体としてどのような出来事・流れがあったかを把握できるように、日本語3〜5文程度で"
-        "簡潔にまとめてください。個々の記事を列挙するのではなく、時系列の変化や全体的な論調を"
-        "意識してください。回答は要約文のみとし、前置きや見出し、箇条書き記号は不要です。"
+        "これらの記事を内容が近いトピックごとにグルーピングし、Markdown形式で構造的にまとめてください。\n"
+        "出力形式のルール:\n"
+        "- トピックごとに「## トピック名」という見出しを付ける(トピック名は内容を端的に表す日本語の短い語句)\n"
+        "- 見出しの下に、そのトピックの動き・要点を2〜4文程度でまとめる(個々の記事の列挙ではなく、"
+        "全体の流れ・論調を意識する)\n"
+        "- トピックは関連記事数が多い、または重要度が高いと思われる順に並べる\n"
+        "- トピック数は記事の内容に応じて2〜5個程度を目安にする(無理に分割・統合しない)\n"
+        "- 見出しと各トピックの本文以外の前置き・結論・注釈は一切含めない\n"
     )
 
 
@@ -528,6 +533,7 @@ def build_consensus_records(results_per_model: dict[str, list[dict]]) -> list[di
             "market_label": sample["market_label"],
             "horizon": horizon,
             "horizon_label": sample["horizon_label"],
+            "calendar_info": sample.get("calendar_info", ""),
             "direction": direction,
             "votes": {"positive": positive, "negative": negative, "total": len(recs)},
             "reasons": {r["model"]: r["reason"] for r in recs},

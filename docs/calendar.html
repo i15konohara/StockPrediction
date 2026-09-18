@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>暦注に基づく株価予測(実験) | ニュースまとめ</title>
+<meta name="description" content="六曜・一粒万倍日・天赦日など日本の伝統的な暦注のみに基づく実験的な株価予測ログ(ニュースは使用しません)">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="index.html">ニュースまとめ</a>
+  <p class="site-desc">キーワード別に自動収集・要約したニュースのまとめサイトです。</p>
+</header>
+<div class="ad-slot"><!-- 広告コード(Google AdSense等)をここに貼り付け --></div>
+<nav class="keyword-nav"><a href="index.html">トップ</a>
+<a href="predictions.html">株価予測ログ</a>
+<a href="calendar.html">暦注予測(実験)</a>
+<a href="models.html">モデル別精度</a>
+<a href="keywords/トランプ.html">トランプ (104)</a>
+<a href="keywords/高市早苗.html">高市早苗 (98)</a>
+<a href="keywords/イラン情勢.html">イラン情勢 (82)</a></nav>
+<main>
+
+    <section>
+      <h2>暦注(六曜・一粒万倍日・天赦日)に基づく株価予測【実験】</h2>
+      <p>ニュースを一切使わず、六曜・一粒万倍日・天赦日といった日本の伝統的な暦注のみを
+      手がかりに複数のLLMモデルが独立に予測し、多数決で最終判定した実験的なログです。
+      これらの暦注は<strong>科学的根拠のない伝統的な考え方であり、実際の相場変動との
+      因果関係は確認されていません</strong>。<a href="predictions.html">ニュース要約に
+      基づく株価予測ログ</a>とは完全に独立した別の試みです。予測対象日を過ぎたものは、
+      実際の指数(日本株: 日経平均 ^N225、米国株: S&amp;P500 ^GSPC)の値動きと比較して
+      自動的に答え合わせしています。</p>
+      <ul class='accuracy-list'><li>総合: 判定待ちのため集計なし</li><li>日本株(日経平均): 判定待ちのため集計なし</li><li>米国株(S&amp;P500): 判定待ちのため集計なし</li></ul>
+      <div class="table-wrap">
+      <table class="prediction-table">
+        <thead>
+          <tr>
+            <th>予測日時</th><th>市場</th><th>期間</th><th>対象日の暦</th>
+            <th>多数決の予測</th><th>各モデルの理由</th><th>結果</th><th>実際の変化率</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+    <tr>
+      <td>2026-09-18 21:35</td>
+      <td>日本株(日経平均)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td class="reason-cell">六曜: 仏滅 / 干支: 丙申 / 季節区分: 秋(立秋〜立冬前) / 一粒万倍日: はい / 天赦日: いいえ</td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 暦注は一粒万倍日の上昇心理がある一方、仏滅でもあり足元の sentiment は混合。ニュースでは中東情勢の悪化、原油価格高騰、石油供給不安により、エネルギー輸入国である日本企業や景気感に下押し圧力がかかるため。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 明日には一粒万倍日となり、景気後退と地政学的リスクが重なる。ニュースでは中東情勢の不安定化による原油高や政治的混乱が指摘されており、市場に負の影響を与える要因が増加しているため。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> 暦注では九月十九日は仏滅だが一粒万倍日であり、伝統的な吉凶は混在するが、ニュース要因として中東情勢不安定化により原油価格が5月以来の高水準に上昇し、同地域からの石油供給途絶懸念が高まるとの報告があり、内閣改造で政治資金不記載議員が起用されるとの情報がある。これらが日本株式市場のセンチメントを圧迫する。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+
+    <tr>
+      <td>2026-09-18 21:35</td>
+      <td>米国株(S&amp;P500)</td>
+      <td>明日<br><span class="card-meta">対象日: 2026-09-19</span></td>
+      <td class="reason-cell">六曜: 仏滅 / 干支: 丙申 / 季節区分: 秋(立秋〜立冬前) / 一粒万倍日: はい / 天赦日: いいえ</td>
+      <td>📉 ネガティブ<br><span class="card-meta">👍0 / 👎3(全3モデル)</span></td>
+      <td class="reason-cell"><ul class='reason-list'><li><strong>nex-agi/nex-n2.5-mini:free:</strong> 暦注の一粒万倍日は一応の材料だが、仏滅による慎重ムードもあり。ニュースではイラン情勢の緊張、原油高、インフレ再懸念、FRB利下げ抵抗が重なり、株安・リスク回避要因が強いと判断するため。</li><li><strong>liquid/lfm-2.5-2.6b:free:</strong> 明日も一粒万倍日であり、原油価格高騰や地政学的リスクが米国経済を圧迫している。トランプ政権の金融政策要求に対する市場の慎重さと、インフレ抑制への困難が株価の下落を促す要因となっている。</li><li><strong>nvidia/nemotron-3.5-lightning:free:</strong> イラン情勢の悪化と原油価格の上昇、トランプ氏のFRB利下げ要求と共和党内の対応不協和音、米防総省の軍施設損傷・弾薬枯渇報告が地政学的リスクと政策不確実性を高め、米国株式市場にリスクオフの動きをもたらす材料となる。</li></ul></td>
+      <td>⏳ 判定待ち</td>
+      <td>-</td>
+    </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+</main>
+<div class="ad-slot"><!-- 広告コード(Google AdSense等)をここに貼り付け --></div>
+<footer class="site-footer">
+  <p>本サイトは自動収集・自動要約による参考情報のまとめです。内容の正確性は保証されません。詳細は各記事の出典元サイトをご確認ください。投資助言ではありません。</p>
+</footer>
+</body>
+</html>

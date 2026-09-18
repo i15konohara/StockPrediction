@@ -124,6 +124,7 @@ def render_nav(keyword_counts: list[tuple[str, int]], asset_prefix: str) -> str:
     links = [
         f'<a href="{asset_prefix}index.html">トップ</a>',
         f'<a href="{asset_prefix}predictions.html">株価予測ログ</a>',
+        f'<a href="{asset_prefix}calendar.html">暦注予測(実験)</a>',
         f'<a href="{asset_prefix}models.html">モデル別精度</a>',
     ]
     for keyword, count in keyword_counts:
@@ -474,6 +475,91 @@ def build_predictions_page(log_path: Path, site_dir: Path, keyword_counts: list[
     (site_dir / "predictions.html").write_text(html_out, encoding="utf-8")
 
 
+def render_calendar_row(rec: dict) -> str:
+    """暦注(六曜・一粒万倍日・天赦日)に基づく多数決予測1件を表示する行。"""
+    market = html.escape(rec.get("market_label", rec.get("market", "")))
+    horizon = html.escape(rec.get("horizon_label", rec.get("horizon", "")))
+    direction = html.escape(DIRECTION_LABELS.get(rec.get("direction"), rec.get("direction", "")))
+    outcome = html.escape(OUTCOME_LABELS.get(rec.get("outcome", ""), rec.get("outcome", "")))
+    predicted_at = html.escape(format_datetime(rec.get("predicted_at", "")))
+    target_date = html.escape(rec.get("target_date", ""))
+    calendar_info = html.escape(rec.get("calendar_info", ""))
+    change = rec.get("actual_change_pct")
+    change_str = html.escape(f"{change:+.2f}%" if change is not None else "-")
+
+    votes = rec.get("votes", {})
+    vote_str = html.escape(f"👍{votes.get('positive', 0)} / 👎{votes.get('negative', 0)}(全{votes.get('total', 0)}モデル)")
+
+    reasons = rec.get("reasons", {})
+    reason_items = "".join(
+        f"<li><strong>{html.escape(model)}:</strong> {html.escape(reason)}</li>"
+        for model, reason in reasons.items()
+    )
+    reason_html = f"<ul class='reason-list'>{reason_items}</ul>" if reason_items else ""
+
+    return f"""
+    <tr>
+      <td>{predicted_at}</td>
+      <td>{market}</td>
+      <td>{horizon}<br><span class="card-meta">対象日: {target_date}</span></td>
+      <td class="reason-cell">{calendar_info}</td>
+      <td>{direction}<br><span class="card-meta">{vote_str}</span></td>
+      <td class="reason-cell">{reason_html}</td>
+      <td>{outcome}</td>
+      <td>{change_str}</td>
+    </tr>"""
+
+
+def build_calendar_page(log_path: Path, site_dir: Path, keyword_counts: list[tuple[str, int]]) -> None:
+    records = load_predictions(log_path)
+    records_sorted = sorted(records, key=lambda r: r.get("predicted_at", ""), reverse=True)
+
+    overall = compute_accuracy(records_sorted)
+    japan_stats = compute_accuracy([r for r in records_sorted if r.get("market") == "japan"])
+    us_stats = compute_accuracy([r for r in records_sorted if r.get("market") == "us"])
+
+    stats_html = "<ul class='accuracy-list'>" + "".join([
+        render_accuracy_stat("総合", overall),
+        render_accuracy_stat("日本株(日経平均)", japan_stats),
+        render_accuracy_stat("米国株(S&P500)", us_stats),
+    ]) + "</ul>"
+
+    rows = "\n".join(render_calendar_row(r) for r in records_sorted)
+    body = f"""
+    <section>
+      <h2>暦注(六曜・一粒万倍日・天赦日)に基づく株価予測【実験】</h2>
+      <p>ニュースを一切使わず、六曜・一粒万倍日・天赦日といった日本の伝統的な暦注のみを
+      手がかりに複数のLLMモデルが独立に予測し、多数決で最終判定した実験的なログです。
+      これらの暦注は<strong>科学的根拠のない伝統的な考え方であり、実際の相場変動との
+      因果関係は確認されていません</strong>。<a href="predictions.html">ニュース要約に
+      基づく株価予測ログ</a>とは完全に独立した別の試みです。予測対象日を過ぎたものは、
+      実際の指数(日本株: 日経平均 ^N225、米国株: S&amp;P500 ^GSPC)の値動きと比較して
+      自動的に答え合わせしています。</p>
+      {stats_html}
+      <div class="table-wrap">
+      <table class="prediction-table">
+        <thead>
+          <tr>
+            <th>予測日時</th><th>市場</th><th>期間</th><th>対象日の暦</th>
+            <th>多数決の予測</th><th>各モデルの理由</th><th>結果</th><th>実際の変化率</th>
+          </tr>
+        </thead>
+        <tbody>
+        {rows if rows else '<tr><td colspan="8">まだ予測がありません。calendar_predictor.py を実行してください。</td></tr>'}
+        </tbody>
+      </table>
+      </div>
+    </section>"""
+
+    nav = render_nav(keyword_counts, asset_prefix="")
+    html_out = render_page(
+        f"暦注に基づく株価予測(実験) | {SITE_TITLE}",
+        "六曜・一粒万倍日・天赦日など日本の伝統的な暦注のみに基づく実験的な株価予測ログ(ニュースは使用しません)",
+        body, nav, asset_prefix="",
+    )
+    (site_dir / "calendar.html").write_text(html_out, encoding="utf-8")
+
+
 def render_model_stat_row(model: str, records: list[dict]) -> str:
     acc = compute_accuracy(records)
     slug = html.escape(slugify_model(model), quote=True)
@@ -729,7 +815,7 @@ h2 { font-size: 1.2rem; margin: 24px 0 12px; }
 def write_seo_files(
     by_keyword: dict[str, list[Article]], site_dir: Path, base_url: str, models: list[str]
 ) -> None:
-    urls = [f"{base_url}/index.html", f"{base_url}/predictions.html", f"{base_url}/models.html"]
+    urls = [f"{base_url}/index.html", f"{base_url}/predictions.html", f"{base_url}/calendar.html", f"{base_url}/models.html"]
     urls += [f"{base_url}/keywords/{slugify(kw)}.html" for kw in by_keyword]
     urls += [f"{base_url}/models/{slugify_model(m)}.html" for m in models]
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -748,6 +834,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=str, default=str(base / "output"))
     parser.add_argument("--site-dir", type=str, default=str(base / "docs"))
     parser.add_argument("--predictions-log", type=str, default=str(base / "predictions" / "log.json"))
+    parser.add_argument("--calendar-log", type=str, default=str(base / "predictions" / "calendar_log.json"))
     parser.add_argument("--by-model-dir", type=str, default=str(base / "predictions" / "by_model"))
     parser.add_argument("--models-file", type=str, default=str(base / "prediction_models.json"))
     parser.add_argument("--base-url", type=str, default="https://example.com",
@@ -771,6 +858,7 @@ def main() -> int:
     output_dir = Path(args.output_dir)
     site_dir = Path(args.site_dir)
     predictions_log = Path(args.predictions_log)
+    calendar_log = Path(args.calendar_log)
     by_model_dir = Path(args.by_model_dir)
 
     if not output_dir.exists():
@@ -790,6 +878,7 @@ def main() -> int:
     build_index(by_keyword, site_dir)
     build_keyword_pages(by_keyword, site_dir)
     build_predictions_page(predictions_log, site_dir, keyword_counts)
+    build_calendar_page(calendar_log, site_dir, keyword_counts)
     build_models_page(by_model_dir, site_dir, keyword_counts, models)
     build_model_detail_pages(by_model_dir, site_dir, keyword_counts, models)
     write_seo_files(by_keyword, site_dir, args.base_url.rstrip("/"), models)

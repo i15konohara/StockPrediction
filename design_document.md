@@ -26,8 +26,13 @@ news_summarizer/
 ├── run_all.bat             # collector→predictor→site_generatorを順に実行(タスクスケジューラ用)
 ├── output/
 │   └── <キーワード>_YYYYMMDD_HHMMSS.json / .md   # キーワードごとの実行結果(取得日時つき)
+├── calendar_info.py         # 六曜・一粒万倍日・天赦日など伝統的な暦注の算出
+├── calendar_predictor.py    # 暦注(ニュース不使用)に基づく株価予測の生成・的中判定
 ├── predictions/
 │   ├── log.json             # 複数モデルの多数決による最終予測ログ(的中判定つき、追記型)
+│   ├── calendar_log.json    # 暦注に基づく多数決予測ログ(ニュースとは独立、追記型)
+│   ├── calendar_by_model/
+│   │   └── <モデル名>.json  # 暦注予測のモデルごとの個別ログ(追記型)
 │   ├── by_model/
 │   │   └── <モデル名>.json  # モデルごとの個別予測ログ(的中判定つき、追記型)
 │   └── context/
@@ -36,6 +41,7 @@ news_summarizer/
 └── docs/                    # site_generator.py が生成する静的サイト(GitHub Pages等にデプロイ可能)
     ├── index.html             # 全キーワード横断の最新記事フィード
     ├── predictions.html       # 多数決による株価予測ログと的中率(時系列表示)
+    ├── calendar.html          # 暦注(六曜等)に基づく株価予測ログ(ニュースとは独立、実験的)
     ├── models.html            # モデル別の予測精度比較
     ├── models/<モデル名>.html # モデルごとの個別予測ログ(時系列表示)
     ├── style.css
@@ -182,6 +188,9 @@ class NewsItem:
     `predictions/log.json`(多数決)を読み込み、予測日時が新しい順にテーブル形式で一覧表示する `docs/predictions.html` を生成する。各行に「予測日時・キーワード・市場・期間(対象日)・多数決の予測(内訳つき)・各モデルの理由・結果(的中/不的中/票同数/判定待ち/データなし)・実際の変化率」を表示し、ページ上部に総合・日本株・米国株それぞれの的中率を集計して表示する。
     また `predictions/by_model/` の各ファイルを読み込み、モデルごとの予測精度比較ページ `docs/models.html` と、モデルごとの個別予測ログを時系列表示する `docs/models/<モデル名>.html` を生成する。サイト内の全ページのナビゲーションに「株価予測ログ」「モデル別精度」へのリンクを追加する。
 
+13. **暦注(六曜・一粒万倍日・天赦日)とニュースを組み合わせた株価予測(calendar_info.py / calendar_predictor.py)**
+    `predictor.py` のログとは別系統の実験的な機能。`calendar_info.py` が、旧暦(lunardateで算出)をもとにした六曜、二十四節気の節切りをもとにした一粒万倍日、季節と干支の組み合わせをもとにした天赦日を計算する(いずれも外部の暦サイトの実データと突き合わせて算出式を検証済み)。`calendar_predictor.py` は、本日・明日の暦注(六曜・一粒万倍日・天赦日・干支・季節区分)と、`output/` にある全キーワードの直近のニュース要約の両方をプロンプトに含め、`prediction_models.json` の各モデルに「明日」の日本株式市場・米国株式市場への影響を独立に予測させ、暦注とニュースそれぞれがどう判断に影響したかを理由に含めさせる(1週間後・1か月後は対象外。暦注の吉凶が薄まり考察の意味が乏しいため)。予測・多数決・的中判定の仕組み(基準値取得・答え合わせ)は `predictor.py` の実装を共有する。ログは `predictions/calendar_log.json`(多数決)・`predictions/calendar_by_model/<モデル名>.json`(モデル別)に別系統で保存し、`site_generator.py` が `docs/calendar.html` という独立したページとして表示する(ナビゲーションに「暦注予測(実験)」へのリンクを追加)。これらの暦注は科学的根拠のない伝統的な考え方であり、実際の相場変動との因果関係は確認されていないことをページ内に明記する。
+
 ## 6. 外部ライブラリ
 
 | ライブラリ | 用途 |
@@ -191,6 +200,8 @@ class NewsItem:
 | `beautifulsoup4` + `lxml` | 記事本文の簡易抽出(スクレイピング) |
 | `yfinance` | 株価予測の答え合わせ用に日経平均・S&P500の実際の終値を取得(predictor.py) |
 | `python-dotenv` | `.env` からのAPIキー読み込み |
+| `lunardate` | 旧暦(太陰太陽暦)の月日への変換(calendar_info.py、六曜の算出に使用) |
+| `koyomi` | 太陽黄経の算出(calendar_info.py、二十四節気・節切りの判定に使用) |
 
 ## 7. 出力フォーマット
 
