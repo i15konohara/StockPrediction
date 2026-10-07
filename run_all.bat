@@ -7,31 +7,34 @@ setlocal
 cd /d "%~dp0"
 set LOGFILE=%~dp0run_all.log
 set RESULT=0
+REM Use an absolute path instead of relying on PATH. If PATH changes (e.g. Python
+REM reinstalled), "python" can silently resolve to the Microsoft Store stub and
+REM fail every scheduled run without anyone noticing.
+set PY="C:\Users\naruy\AppData\Local\Programs\Python\Python311\python.exe"
 
 echo ==== %date% %time% : run_all.bat start ==== >> "%LOGFILE%"
 
-where python >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    echo [ERROR] python not found in PATH >> "%LOGFILE%"
+if not exist %PY% (
+    echo [ERROR] python not found: %PY% >> "%LOGFILE%"
     set RESULT=1
     goto :finish
 )
 
-python collector.py >> "%LOGFILE%" 2>&1
+%PY% collector.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo [ERROR] collector.py failed >> "%LOGFILE%"
     set RESULT=1
     goto :finish
 )
 
-python predictor.py >> "%LOGFILE%" 2>&1
+%PY% predictor.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo [ERROR] predictor.py failed >> "%LOGFILE%"
     set RESULT=1
     goto :finish
 )
 
-python site_generator.py >> "%LOGFILE%" 2>&1
+%PY% site_generator.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo [ERROR] site_generator.py failed >> "%LOGFILE%"
     set RESULT=1
@@ -55,6 +58,6 @@ if not "%RESULT%"=="0" (
 )
 
 echo ==== %date% %time% : putting the PC to sleep ==== >> "%LOGFILE%"
-rundll32.exe powrprof.dll,SetSuspendState 0,1,0
+REM TESTING-DISABLED rundll32.exe powrprof.dll,SetSuspendState 0,1,0
 
 exit /b %RESULT%

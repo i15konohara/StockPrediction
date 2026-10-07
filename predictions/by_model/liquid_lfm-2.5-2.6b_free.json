@@ -1568,11 +1568,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66215.34375,
     "baseline_date": "2026-09-01",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 4.14,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -1631,11 +1631,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7631.47021484375,
     "baseline_date": "2026-09-01",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 0.46,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -1694,11 +1694,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 64325.640625,
     "baseline_date": "2026-09-02",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 6.19,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -1757,11 +1757,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7666.60009765625,
     "baseline_date": "2026-09-02",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 0.73,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -1820,11 +1820,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 64214.48046875,
     "baseline_date": "2026-09-03",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 6.38,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -1883,11 +1883,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7747.7099609375,
     "baseline_date": "2026-09-03",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": -0.32,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -1946,11 +1946,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65020.94140625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 7.58,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2009,11 +2009,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.72,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2072,11 +2072,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65020.94140625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 7.58,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2135,11 +2135,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.72,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2198,11 +2198,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66399.84375,
     "baseline_date": "2026-09-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70683.9765625,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 6.45,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2261,11 +2261,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.3,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2324,11 +2324,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66399.84375,
     "baseline_date": "2026-09-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 70074.1328125,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 5.53,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -2387,11 +2387,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7673.52001953125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.89,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3206,11 +3206,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66215.34375,
     "baseline_date": "2026-09-01",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 4.14,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3269,11 +3269,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7631.47021484375,
     "baseline_date": "2026-09-01",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 0.46,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3332,11 +3332,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 64325.640625,
     "baseline_date": "2026-09-02",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 6.19,
+    "evaluated_at": "2026-10-07T11:47:25"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3395,11 +3395,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7666.60009765625,
     "baseline_date": "2026-09-02",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 0.73,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3458,11 +3458,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 64214.48046875,
     "baseline_date": "2026-09-03",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 6.38,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3521,11 +3521,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7747.7099609375,
     "baseline_date": "2026-09-03",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": -0.32,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3584,11 +3584,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65020.94140625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 7.58,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3647,11 +3647,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.72,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3710,11 +3710,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65020.94140625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 7.58,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3773,11 +3773,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.72,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3836,11 +3836,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66399.84375,
     "baseline_date": "2026-09-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70683.9765625,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 6.45,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3899,11 +3899,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.3,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -3962,11 +3962,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66399.84375,
     "baseline_date": "2026-09-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 70074.1328125,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 5.53,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -4025,11 +4025,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7673.52001953125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.89,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -4844,11 +4844,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66215.34375,
     "baseline_date": "2026-09-01",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 4.14,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -4907,11 +4907,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7631.47021484375,
     "baseline_date": "2026-09-01",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 0.46,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -4970,11 +4970,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 64325.640625,
     "baseline_date": "2026-09-02",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 6.19,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5033,11 +5033,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7666.60009765625,
     "baseline_date": "2026-09-02",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 0.73,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5096,11 +5096,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 64214.48046875,
     "baseline_date": "2026-09-03",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 6.38,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5159,11 +5159,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7747.7099609375,
     "baseline_date": "2026-09-03",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": -0.32,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5222,11 +5222,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65020.94140625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 7.58,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5285,11 +5285,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.72,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5348,11 +5348,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65020.94140625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 7.58,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5411,11 +5411,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.72,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5474,11 +5474,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66399.84375,
     "baseline_date": "2026-09-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70683.9765625,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 6.45,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5537,11 +5537,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7718.60009765625,
     "baseline_date": "2026-09-04",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.3,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5600,11 +5600,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66399.84375,
     "baseline_date": "2026-09-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 70074.1328125,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 5.53,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -5663,11 +5663,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7673.52001953125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.89,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -7196,11 +7196,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65018.94921875,
     "baseline_date": "2026-09-18",
-    "outcome": "",
+    "outcome": "no_data",
     "actual_price": null,
     "actual_date": "",
     "actual_change_pct": null,
-    "evaluated_at": ""
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -7259,11 +7259,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7771.41015625,
     "baseline_date": "2026-09-21",
-    "outcome": "",
+    "outcome": "no_data",
     "actual_price": null,
     "actual_date": "",
     "actual_change_pct": null,
-    "evaluated_at": ""
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -7574,11 +7574,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65018.94921875,
     "baseline_date": "2026-09-18",
-    "outcome": "",
+    "outcome": "no_data",
     "actual_price": null,
     "actual_date": "",
     "actual_change_pct": null,
-    "evaluated_at": ""
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -7637,11 +7637,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7771.41015625,
     "baseline_date": "2026-09-21",
-    "outcome": "",
+    "outcome": "no_data",
     "actual_price": null,
     "actual_date": "",
     "actual_change_pct": null,
-    "evaluated_at": ""
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -7952,11 +7952,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65018.94921875,
     "baseline_date": "2026-09-18",
-    "outcome": "",
+    "outcome": "no_data",
     "actual_price": null,
     "actual_date": "",
     "actual_change_pct": null,
-    "evaluated_at": ""
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -8015,11 +8015,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7771.41015625,
     "baseline_date": "2026-09-21",
-    "outcome": "",
+    "outcome": "no_data",
     "actual_price": null,
     "actual_date": "",
     "actual_change_pct": null,
-    "evaluated_at": ""
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -8477,11 +8477,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65018.94921875,
     "baseline_date": "2026-09-18",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 6.06,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -8540,11 +8540,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7710.68994140625,
     "baseline_date": "2026-09-23",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": -0.57,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -8729,11 +8729,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65018.94921875,
     "baseline_date": "2026-09-18",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 6.06,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -8792,11 +8792,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7710.68994140625,
     "baseline_date": "2026-09-23",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": -0.57,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -8981,11 +8981,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65018.94921875,
     "baseline_date": "2026-09-18",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 6.06,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9044,11 +9044,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7710.68994140625,
     "baseline_date": "2026-09-23",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": -0.57,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9107,11 +9107,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65513.98828125,
     "baseline_date": "2026-09-24",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 4.27,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9170,11 +9170,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7738.9501953125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": -0.21,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9233,11 +9233,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65513.98828125,
     "baseline_date": "2026-09-24",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 4.27,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9296,11 +9296,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7738.9501953125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": -0.21,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9359,11 +9359,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65513.98828125,
     "baseline_date": "2026-09-24",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 68309.4609375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": 4.27,
+    "evaluated_at": "2026-10-07T11:47:26"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9422,11 +9422,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7738.9501953125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7722.72021484375,
+    "actual_date": "2026-10-02",
+    "actual_change_pct": -0.21,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9485,11 +9485,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 5.4,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9548,11 +9548,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7698.27978515625,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.98,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9611,11 +9611,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 5.4,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9674,11 +9674,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7699.06005859375,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.97,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9737,11 +9737,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70683.9765625,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 6.51,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9800,11 +9800,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7694.009765625,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.62,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9863,11 +9863,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 5.4,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9926,11 +9926,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7698.27978515625,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.98,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -9989,11 +9989,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 5.4,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10052,11 +10052,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7699.06005859375,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.97,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10115,11 +10115,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70683.9765625,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 6.51,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10178,11 +10178,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7694.009765625,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.62,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10241,11 +10241,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 5.4,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10304,11 +10304,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7698.27978515625,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.98,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10367,11 +10367,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 69946.859375,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 5.4,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10430,11 +10430,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7699.06005859375,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7773.9501953125,
+    "actual_date": "2026-10-05",
+    "actual_change_pct": 0.97,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10493,11 +10493,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 66364.203125,
     "baseline_date": "2026-09-25",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 70683.9765625,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 6.51,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10556,11 +10556,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7694.009765625,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.62,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10598,11 +10598,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65877.6171875,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 4.67,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10619,11 +10619,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65877.6171875,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70074.1328125,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 6.37,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10661,11 +10661,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7676.39990234375,
     "baseline_date": "2026-09-29",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": -0.13,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10682,11 +10682,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7676.39990234375,
     "baseline_date": "2026-09-29",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.86,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10724,11 +10724,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65877.6171875,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 4.67,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10745,11 +10745,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65877.6171875,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70074.1328125,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 6.37,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10787,11 +10787,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7676.39990234375,
     "baseline_date": "2026-09-29",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": -0.13,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10808,11 +10808,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7676.39990234375,
     "baseline_date": "2026-09-29",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.86,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10850,11 +10850,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65877.6171875,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 68956.71875,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": 4.67,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10871,11 +10871,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65877.6171875,
     "baseline_date": "2026-09-28",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 70074.1328125,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 6.37,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10892,11 +10892,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7676.39990234375,
     "baseline_date": "2026-09-29",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7666.4501953125,
+    "actual_date": "2026-10-01",
+    "actual_change_pct": -0.13,
+    "evaluated_at": "2026-10-07T11:47:27"
   },
   {
     "model": "liquid/lfm-2.5-2.6b:free",
@@ -10913,6 +10913,384 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7676.39990234375,
     "baseline_date": "2026-09-29",
+    "outcome": "miss",
+    "actual_price": 7818.93017578125,
+    "actual_date": "2026-10-06",
+    "actual_change_pct": 1.86,
+    "evaluated_at": "2026-10-07T11:47:27"
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "イラン情勢",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "direction": "negative",
+    "reason": "高原油価格と地政学的緊張が継続し、市場のマイナス要因として機能しているため",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-08",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "イラン情勢",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "direction": "positive",
+    "reason": "直近1週間は上昇トレンドが続き、構造的なリスク要因が緩和される可能性があるため",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-14",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "イラン情勢",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "direction": "positive",
+    "reason": "長期的な原油価格高騰が市場の底支えとなり、ポジティブな動きが続くと予測される",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-11-06",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "イラン情勢",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "direction": "negative",
+    "reason": "原油高と地政学的緊張が米国株にも悪影響を及ぼし、直近の微弱上昇が続く見通し",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-08",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "イラン情勢",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "direction": "positive",
+    "reason": "直近1週間は上昇傾向が続き、市場の落ち着きとエネルギー価格の安定期待が反映されているため",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-14",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "イラン情勢",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "direction": "positive",
+    "reason": "OPEC+の生産枯渇状態が続く中、構造的なエネルギー価格高騰が米国株を押し上げる要因となる",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-11-06",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "トランプ",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "direction": "positive",
+    "reason": "日経平均は直近1か月にわたる上昇トレンド（+9.13%）を維持しており、選挙の影響がまだ短期的には大きく反映されていないため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-08",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "トランプ",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "direction": "positive",
+    "reason": "政治的リスクは継続するものの、市場は長期的な上昇基調を維持すると予想され、安定した上昇が期待できるため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-14",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "トランプ",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "direction": "positive",
+    "reason": "選挙結果待ちの不安定感があるものの、基本的な経済成長の鈍化が進んでおらず、回復力があるため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-11-06",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "トランプ",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "direction": "negative",
+    "reason": "中間選挙の結果不透明性と、税金利用による支持率低下、貿易摩擦の激化が投資家の不安を煽っているため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-08",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "トランプ",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "direction": "negative",
+    "reason": "選挙の進展に伴う政治的リスクが市場の安定性を損なう可能性があり、調整局面に入る見込みがあるため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-14",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "トランプ",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "direction": "negative",
+    "reason": "政治的リスクが解消せず、経済指標の改善が遅れるため、長期的な上昇は困難となるため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-11-06",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "高市早苗",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "direction": "negative",
+    "reason": "G7 欠席への批判、政治的争議、財政負担への懸念が市場の不安を煽り、株価の下落圧力が予想される。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-08",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "高市早苗",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "direction": "negative",
+    "reason": "税減税法案の国会論戦や政治的揺らぎが継続し、投資家の信頼が揺らぐ可能性があるため。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-14",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "高市早苗",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "direction": "negative",
+    "reason": "政治的混乱とメディアの批判が長期的に株価に悪影響を与え、サポート率の低下も見込まれる。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-11-06",
+    "baseline_symbol": "^N225",
+    "baseline_price": 70074.1328125,
+    "baseline_date": "2026-10-07",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "高市早苗",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "direction": "positive",
+    "reason": "米国市場は安定しており、日本の政治的揺らぎが直接的なマイナス要因にならず、S&P500 は上昇トレンドを維持している。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-08",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "高市早苗",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "direction": "positive",
+    "reason": "米国経済の堅調さとインフレ抑制の進展が投資心理を支え、株価が上昇傾向を続けると予想される。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-10-14",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "keyword": "高市早苗",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "direction": "positive",
+    "reason": "米国は依然として成長基盤が強固であり、短期的なリスク要因が限定的であるため、長期的な上昇期待が残る。",
+    "predicted_at": "2026-10-07T11:47:21",
+    "source_generated_at": "2026-10-07T11:47:21",
+    "target_date": "2026-11-06",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7818.93017578125,
+    "baseline_date": "2026-10-06",
     "outcome": "",
     "actual_price": null,
     "actual_date": "",
