@@ -58,6 +58,6 @@ if not "%RESULT%"=="0" (
 )
 
 echo ==== %date% %time% : putting the PC to sleep ==== >> "%LOGFILE%"
-REM TESTING-DISABLED rundll32.exe powrprof.dll,SetSuspendState 0,1,0
+rundll32.exe powrprof.dll,SetSuspendState 0,1,0
 
 exit /b %RESULT%

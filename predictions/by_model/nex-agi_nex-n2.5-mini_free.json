@@ -2450,11 +2450,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65269.328125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70035.7109375,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 7.3,
+    "evaluated_at": "2026-10-09T03:26:52"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -2513,11 +2513,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7673.52001953125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7761.72998046875,
+    "actual_date": "2026-10-08",
+    "actual_change_pct": 1.15,
+    "evaluated_at": "2026-10-09T03:26:53"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -2576,11 +2576,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65142.78125,
     "baseline_date": "2026-09-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70035.7109375,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 7.51,
+    "evaluated_at": "2026-10-09T03:26:53"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -2639,11 +2639,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7636.35986328125,
     "baseline_date": "2026-09-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7761.75,
+    "actual_date": "2026-10-08",
+    "actual_change_pct": 1.64,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -3458,11 +3458,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65269.328125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70035.7109375,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 7.3,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -3521,11 +3521,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7673.52001953125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7761.72998046875,
+    "actual_date": "2026-10-08",
+    "actual_change_pct": 1.15,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -3584,11 +3584,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65142.78125,
     "baseline_date": "2026-09-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70035.7109375,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 7.51,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -3647,11 +3647,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7636.35986328125,
     "baseline_date": "2026-09-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7761.75,
+    "actual_date": "2026-10-08",
+    "actual_change_pct": 1.64,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -6104,11 +6104,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65269.328125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70035.7109375,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 7.3,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -6167,11 +6167,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7673.52001953125,
     "baseline_date": "2026-09-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7761.72998046875,
+    "actual_date": "2026-10-08",
+    "actual_change_pct": 1.15,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -6230,11 +6230,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 65142.78125,
     "baseline_date": "2026-09-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 70035.7109375,
+    "actual_date": "2026-10-07",
+    "actual_change_pct": 7.51,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
@@ -6293,11 +6293,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7636.35986328125,
     "baseline_date": "2026-09-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7761.75,
+    "actual_date": "2026-10-08",
+    "actual_change_pct": 1.64,
+    "evaluated_at": "2026-10-09T03:26:54"
   },
   {
     "model": "nex-agi/nex-n2.5-mini:free",
