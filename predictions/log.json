@@ -1286,11 +1286,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 63484.1015625,
     "baseline_date": "2026-09-15",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": 6.76,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -1373,11 +1373,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7585.72998046875,
     "baseline_date": "2026-09-15",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": 1.53,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -1460,11 +1460,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 63484.1015625,
     "baseline_date": "2026-09-15",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": 6.76,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -1547,11 +1547,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7585.72998046875,
     "baseline_date": "2026-09-15",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": 1.53,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "高市早苗",
@@ -1634,11 +1634,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 63484.1015625,
     "baseline_date": "2026-09-15",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": 6.76,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "高市早苗",
@@ -1721,11 +1721,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7585.72998046875,
     "baseline_date": "2026-09-15",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": 1.53,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -18186,11 +18186,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 70035.7109375,
     "baseline_date": "2026-10-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -3.22,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -18273,11 +18273,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7761.16015625,
     "baseline_date": "2026-10-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": -0.76,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -18534,11 +18534,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 70035.7109375,
     "baseline_date": "2026-10-07",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -3.22,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -18621,11 +18621,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7761.16015625,
     "baseline_date": "2026-10-08",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "miss",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": -0.76,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -19723,11 +19723,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -20071,11 +20071,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "高市早苗",
@@ -20245,11 +20245,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -20419,11 +20419,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -20593,11 +20593,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "高市早苗",
@@ -20767,11 +20767,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -20941,11 +20941,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -21115,11 +21115,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "高市早苗",
@@ -21289,11 +21289,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -21376,11 +21376,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7807.1201171875,
     "baseline_date": "2026-10-13",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": -1.35,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "イラン情勢",
@@ -21463,11 +21463,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -21550,11 +21550,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7807.1201171875,
     "baseline_date": "2026-10-13",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": -1.35,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "トランプ",
@@ -21637,11 +21637,11 @@
     "baseline_symbol": "^N225",
     "baseline_price": 69030.921875,
     "baseline_date": "2026-10-09",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 67777.5234375,
+    "actual_date": "2026-10-13",
+    "actual_change_pct": -1.82,
+    "evaluated_at": "2026-10-15T03:12:45"
   },
   {
     "keyword": "高市早苗",
@@ -21724,11 +21724,11 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7807.1201171875,
     "baseline_date": "2026-10-13",
-    "outcome": "",
-    "actual_price": null,
-    "actual_date": "",
-    "actual_change_pct": null,
-    "evaluated_at": ""
+    "outcome": "hit",
+    "actual_price": 7701.97021484375,
+    "actual_date": "2026-10-14",
+    "actual_change_pct": -1.35,
+    "evaluated_at": "2026-10-15T03:12:46"
   },
   {
     "keyword": "高市早苗",
@@ -21782,6 +21782,528 @@
     "baseline_symbol": "^GSPC",
     "baseline_price": 7807.1201171875,
     "baseline_date": "2026-10-13",
+    "outcome": "tie",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "イラン情勢",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "イラン情勢の緊張が続く中東紛争とホルムズ海峡の混乱により原油価格高騰が続き、市場の不確実性が増しているため",
+      "nvidia/nemotron-3.5-lightning:free": "トランプ氏の軍事攻撃再開示唆とイランの新攻撃戦術が、市場に即時的な地政学的リスクプレミアムを織り込み、リスクオフ売りが優勢となっているため。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-16",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "イラン情勢",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "直近1週間も戦闘継続とエネルギー供給不安が投資家のリスク回避心理を強めており、株価は下落傾向が続いています",
+      "nvidia/nemotron-3.5-lightning:free": "継続する中東紛争と米国内のイラン対応への足並みの乱れが、1週間を通じたリスク回避志向を強め、株価下押し要因となっているため。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-22",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "イラン情勢",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "中長期の原油供給不安と地政学的リスクが根強く残っており、市場は回復に至っておらずネガティブな動きが予想されます",
+      "nvidia/nemotron-3.5-lightning:free": "原油価格の高止まりと金利上昇が企業収益を圧迫し、イラン情勢の地政学的リスクが継続する中で、1か月後の日本株は上値が重い見通しとなるため。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-11-14",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "イラン情勢",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "原油高と地政学的リスクが投資環境を悪化させ、米国株式は下落傾向にあります",
+      "nvidia/nemotron-3.5-lightning:free": "水曜のCPIを控えた慎重な姿勢と、IMFのAI減速・長期金利上昇リスクに加え、イラン情勢の不透明が相乗効果でリスクオフを誘発し、明日の米株は下落圧力が予想されるため。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-16",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "イラン情勢",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "紛争の激化と経済指標の懸念から米国株式は継続的に下落圧にさらされています",
+      "nvidia/nemotron-3.5-lightning:free": "継続する地政学的リスクと長期金利の上昇圧力が、米株のリスクプレミアムを膨らませ、1週間後の株価見通しを下押しするため。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-22",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "イラン情勢",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "月次データにわずかな上昇が見られますが、根本的なリスク要因が残るため中期的にはネガティブな方向が予想されます",
+      "nvidia/nemotron-3.5-lightning:free": "原油高と金利上昇が米国株式の続落を招くとの市場認識に加え、イラン情勢の不確実性とBRICSの懸念が、1か月後の米株価見通しを下落方向に向かわせる要因となるため。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-11-14",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "トランプ",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "トランプ政権による極端な政策（公開銃殺刑の計画など）とメディア排除が米国および日本市場の不安定さを招き、インフレや選挙の混乱が続くため。",
+      "nvidia/nemotron-3.5-lightning:free": "直近1日の日経平均は-1.82%の下落となり、トランプ政権の新たな政治的論争（公開銃殺刑計画など）がリスクオフを誘発し、下落トレンドの継続が予想される。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-16",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "トランプ",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "米国の政治的混乱と経済指標の悪化が継続し、具体的な好材料がないため、株価は下落傾向が維持される見込み。",
+      "nvidia/nemotron-3.5-lightning:free": "直近1週間で-3.10%の下落となり、中間選挙前の政治不確実性とトランプ関連の政策リスク（関税、移民、司法対立など）が市場心理を圧迫し、継続的な下押し圧力がかかっている。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-22",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "トランプ",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "calendar_info": "",
+    "direction": "tie",
+    "votes": {
+      "positive": 1,
+      "negative": 1,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "米国での移民政策の反発や経済的課題が深まり、景気後退のリスクが高まる可能性があり、長期的な下落圧力が予想される。",
+      "nvidia/nemotron-3.5-lightning:free": "直近1か月で+3.84%の上昇となり、1か月間でトランプ政権の政策変更や地政学的リスクが相場に織り込まれた上で、あるいは特定セクターの恩恵もあり上昇トレンドが維持された。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-11-14",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "tie",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "トランプ",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "トランプ政権による極端な行動（公開処刑計画）の報道が世界に広がり、市場の不確実性が拡大しているため。",
+      "nvidia/nemotron-3.5-lightning:free": "直近1日のS&P500は-1.24%の下落となり、トランプ政権の継続的な論争が米市場に短期的なリスクオフ圧力をかけ、下落基調が続いている。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-16",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "トランプ",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "米国経済の不確実性（インフレ、関税、選挙）が続き、株価は低迷傾向が続く。特筆すべきポジティブ要因はない。",
+      "nvidia/nemotron-3.5-lightning:free": "直近1週間で-1.20%の下落となり、中間選挙ムードとトランプ政権の政策変更が米株価指数に重しとなり、小幅ながら下落基調が続いている。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-22",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "トランプ",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "calendar_info": "",
+    "direction": "tie",
+    "votes": {
+      "positive": 1,
+      "negative": 1,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "中間選挙の結果や政権運営の混乱が長期的な景気後退につながる可能性があり、株価は下方修正が予想される。",
+      "nvidia/nemotron-3.5-lightning:free": "直近1か月で+1.62%の上昇となり、米市場はトランプ政権の政策リスクを消化しつつ、底堅い経済指標や政策期待によってプラス圏に戻している。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-11-14",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "tie",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "高市早苗",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "農林水産大臣の更迭と朝日新聞等の批判が首相の信頼を損ない、財政政策への懸念が拡大し、市場の不安が広がる",
+      "nvidia/nemotron-3.5-lightning:free": "最新ニュース要約で「もうかばえない」と評された簗農相更迭などの政治不祥事が、直近1日の日経平均-1.82％下落に直結し、政権運営への懸念が下押し圧力となっている。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-16",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "高市早苗",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "内閣改造後の政治的不安定感と有権者の支持率低下傾向が続くため、ニケイ指数は下落圧力が続く",
+      "nvidia/nemotron-3.5-lightning:free": "1週間のニュースでは支持率低下、PR費批判、不記載議員の起用など複数の政治リスクが重なり、日経平均は-3.10％の下落。市場センチメントの継続的な悪化。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-22",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "高市早苗",
+    "market": "japan",
+    "market_label": "日本株(日経平均)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "calendar_info": "",
+    "direction": "tie",
+    "votes": {
+      "positive": 1,
+      "negative": 1,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "政治的混乱と債務リスクへの懸念が長期的に投下者の信頼を損ね、株価は緩やかな下落を維持する",
+      "nvidia/nemotron-3.5-lightning:free": "1カ月では+3.84％の上昇となり、簗農相更迭などのショックが市場に消化され、防衛協力や政策継続への期待が復調要因となった。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-11-14",
+    "baseline_symbol": "^N225",
+    "baseline_price": 67777.5234375,
+    "baseline_date": "2026-10-13",
+    "outcome": "tie",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "高市早苗",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "tomorrow",
+    "horizon_label": "明日",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "高市首相の更迭と財政拡大への批判がグローバルリスク感を高め、S&P500が微弱下落を示す",
+      "nvidia/nemotron-3.5-lightning:free": "トランプ大統領との日米会談や中露関連の地緻件、ウクライナ支援報道がリスクオフムードを助長し、S&P500は-1.24％の下落。日本の政治不祥事も海外リスクとして織り込まれている。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-16",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "高市早苗",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1week",
+    "horizon_label": "1週間後",
+    "calendar_info": "",
+    "direction": "negative",
+    "votes": {
+      "positive": 0,
+      "negative": 2,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "日本政治の不安定さが国際市場のリスク回避を促し、米国株が微弱な下落圧力を受ける",
+      "nvidia/nemotron-3.5-lightning:free": "1週間で地政学的懸念が継続し、S&P500は-1.20％の小幅下落。市場は慎重な姿勢を維持し、直接的な米国経済指標の変化は限定的。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-10-22",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
+    "outcome": "",
+    "actual_price": null,
+    "actual_date": "",
+    "actual_change_pct": null,
+    "evaluated_at": ""
+  },
+  {
+    "keyword": "高市早苗",
+    "market": "us",
+    "market_label": "米国株(S&P500)",
+    "horizon": "1month",
+    "horizon_label": "1か月後",
+    "calendar_info": "",
+    "direction": "tie",
+    "votes": {
+      "positive": 1,
+      "negative": 1,
+      "total": 2
+    },
+    "reasons": {
+      "liquid/lfm-2.5-2.6b:free": "持続する日本政治の揺らぎと財政懸念が米国市場にも影を落とし、S&P500は概ね低迷傾向を維持する",
+      "nvidia/nemotron-3.5-lightning:free": "1カ月では+1.62％の上昇となり、米国市場のレジリエンスとともに、日本の政治ショックが波及しにくい領域と見られ、マクロ経済要因がプラスに作用した結果。"
+    },
+    "predicted_at": "2026-10-15T03:12:38",
+    "source_generated_at": "2026-10-15T03:12:38",
+    "target_date": "2026-11-14",
+    "baseline_symbol": "^GSPC",
+    "baseline_price": 7708.64013671875,
+    "baseline_date": "2026-10-14",
     "outcome": "tie",
     "actual_price": null,
     "actual_date": "",
